@@ -1,16 +1,106 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --navbar-height: 80px;
+  --primary: #fff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+section {
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.home,
+.about,
+.experience,
+.work,
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.home {
+  background-color: coral;
+}
+
+.about {
+  background-color: #48a3a3;
+  /* background-image: url('../assets/images/pyramids.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.experience {
+  background-color: #9b966e;
+  /* background-image: url('../assets/images/tropics.jpg'); */
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.work {
+  background-color: #8d6394;
+  /* background-image: url('../assets/images/tropics.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.contact {
+  background-color: #397e42;
+  /* background-image: url('../assets/images/river.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+button:hover,
+button:focus {
+  background: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+.fas {
+  z-index: 10;
+}
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
 }

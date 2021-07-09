@@ -1,0 +1,148 @@
+.navbar {
+  background: linear-gradient(90deg, rgb(6, 11, 38) 0%, rgb(6, 11, 45) 100%);
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  /* position: sticky;
+  top: 0;
+  z-index: 999; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbarLogo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  height: 100%;
+  width: 60vw;
+  justify-content: end;
+}
+
+.navItem {
+  height: 80px;
+}
+
+.navLinks {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.navLinks:hover {
+  color: coral;
+  transition: all 0.15s ease-out;
+}
+
+.navLinksMobile {
+  display: none;
+  white-space: nowrap;
+}
+
+.menuIcon {
+  display: none;
+  z-index: 10;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .navMenu {
+    background-color: #060b26;
+    width: 360px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    padding-top: 80px;
+    right: -100%;
+    transition: 500ms;
+    z-index: 1;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+  }
+
+  .navMenu.active {
+    right: 0;
+    transition: 200ms;
+    z-index: 1;
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navLinks:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbarLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .navLinksMobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .navLinksMobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}
