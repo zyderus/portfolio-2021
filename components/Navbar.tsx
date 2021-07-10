@@ -1,7 +1,7 @@
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { Button } from './Button'
+import Button from './Button'
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -68,7 +68,11 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          {button && <Button>Resume</Button>}
+          {button && (
+            <Button style={'outline'} size={'medium'}>
+              Resume
+            </Button>
+          )}
         </div>
       </nav>
     </>

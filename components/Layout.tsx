@@ -10,7 +10,9 @@ const Layout: React.FC<Props> = ({ children }) => {
       <header className={styles.header}>
         <Navbar />
       </header>
-      <section className={styles.content}>{children}</section>
+      <section className={styles.content}>
+        <div className={styles.main}>{children}</div>
+      </section>
       <footer className={styles.footer}>
         <Footer />
       </footer>

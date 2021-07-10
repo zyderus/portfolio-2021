@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Intro from '../components/Intro'
 
 export default function Contact() {
   return (
     <>
-      <section className='home'>
-        <h1>HOME Section</h1>
+      <section className='intro'>
+        <Intro />
       </section>
       <section className='about'>
         <h1>ABOUT Section</h1>

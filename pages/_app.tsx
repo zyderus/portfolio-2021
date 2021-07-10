@@ -16,8 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity='sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk'
           crossOrigin='anonymous'
         />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
         {/* eslint-disable-next-line */}
-        <link href='https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'></link>
       </Head>
       <Component {...pageProps} />
     </Layout>

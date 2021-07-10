@@ -1,6 +1,10 @@
 :root {
   --navbar-height: 80px;
-  --primary: #fff;
+  --primary: #333;
+  --secondary: #777;
+  --bg-primary: #fff;
+  --bg-secondary: #ccc;
+  --accent: #095f9d;
 }
 
 * {
@@ -14,20 +18,19 @@ section {
   min-height: calc(100vh - var(--navbar-height));
 }
 
-.home,
+.intro,
 .about,
 .experience,
 .work,
 .contact {
+  border: 1px solid yellowgreen;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
 }
 
-.home {
-  background-color: coral;
-}
+/* .intro {
+} */
 
 .about {
   background-color: #48a3a3;
@@ -95,12 +98,16 @@ button:focus {
 }
 
 .fa-bars {
-  color: #fff;
+  color: var(--primary);
+}
+
+.accent {
+  color: var(--accent);
 }
 
 @media screen and (max-width: 960px) {
   .fa-times {
-    color: #fff;
+    color: var(--primary);
     font-size: 2rem;
   }
 }

@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(6, 11, 38) 0%, rgb(6, 11, 45) 100%);
+  background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   height: var(--navbar-height);
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 .navbarLogo {
-  color: #fff;
+  color: var(--primary);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -45,7 +45,7 @@
 }
 
 .navLinks {
-  color: #fff;
+  color: var(--primary);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -74,7 +74,7 @@
   }
 
   .navMenu {
-    background-color: #060b26;
+    background-color: var(--bg-secondary);
     width: 360px;
     height: 100vh;
     display: flex;
@@ -134,15 +134,15 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fff;
+    color: var(--accent);
     padding: 14px 20px;
-    border: 1px solid #fff;
+    border: 1px solid var(--accent);
     transition: all 0.3s ease-out;
   }
 
   .navLinksMobile:hover {
     background: #fff;
-    color: #242424;
+    /* color: #242424; */
     transition: 250ms;
   }
 }
