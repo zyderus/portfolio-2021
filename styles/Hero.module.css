@@ -1,4 +1,10 @@
-/* .container {
+/* .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
 } */
 
 .title__name {

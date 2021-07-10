@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+}
+
+.li {
+  list-style-type: disc;
+}

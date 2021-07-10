@@ -10,13 +10,9 @@ const Button: React.FC<any> = ({ style, size, click, children }) => {
 
   return (
     <>
-      <Link href='/sign-up'>
-        <a>
-          <button className={[styles.btn, checkStyle, checkSize].join(' ')} onClick={click}>
-            {children}
-          </button>
-        </a>
-      </Link>
+      <button className={[styles.btn, checkStyle, checkSize].join(' ')} onClick={click}>
+        {children}
+      </button>
     </>
   )
 }

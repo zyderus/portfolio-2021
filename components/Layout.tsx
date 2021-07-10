@@ -6,17 +6,17 @@ type Props = { children: JSX.Element | JSX.Element[] }
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <section className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <header className={styles.header}>
         <Navbar />
       </header>
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.main}>{children}</div>
-      </section>
+      </div>
       <footer className={styles.footer}>
         <Footer />
       </footer>
-    </section>
+    </div>
   )
 }
 

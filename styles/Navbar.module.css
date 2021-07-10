@@ -1,56 +1,48 @@
 .navbar {
-  background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-  height: var(--navbar-height);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1rem;
-  /* position: sticky;
-  top: 0;
-  z-index: 999; */
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  max-width: 1500px;
+  width: 100%;
+  /* position: sticky; */
+  /* top: 0; */
+  /* z-index: 999; */
+  /* background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); */
 }
 
 .navbarLogo {
-  color: var(--primary);
+  color: var(--accent);
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  transition: var(--transition);
 }
 
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  display: flex;
   list-style: none;
   text-align: center;
-  height: 100%;
-  width: 60vw;
-  justify-content: end;
+  align-items: center;
 }
 
-.navItem {
-  height: 80px;
-}
+/* .navItem {
+} */
 
 .navLinks {
   color: var(--primary);
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
+  padding: 0 1rem;
+}
+
+.resumeButton {
+  padding: 0;
+  padding-left: 0.5rem;
 }
 
 .navLinks:hover {
@@ -59,34 +51,39 @@
 }
 
 .navLinksMobile {
-  display: none;
+  display: block;
   white-space: nowrap;
 }
 
 .menuIcon {
   display: none;
-  z-index: 10;
+  z-index: 99;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .NavbarItems {
     position: relative;
   }
 
   .navMenu {
-    background-color: var(--bg-secondary);
-    width: 360px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     position: fixed;
     top: 0;
-    padding-top: 80px;
-    right: -100%;
-    transition: 500ms;
+    bottom: 0;
+    right: 0;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0;
+    background-color: #e6e6e6;
+    box-shadow: -10px 0px 30px -15px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: -430px;
+    transform: translateX(0vw);
+    visibility: visible;
+    transition: 300ms;
     z-index: 1;
-    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
   }
 
   .navMenu.active {
@@ -99,7 +96,8 @@
     text-align: center;
     padding: 2rem;
     width: 100%;
-    display: table;
+    display: flex;
+    justify-content: center;
   }
 
   .navLinks:hover {
@@ -109,10 +107,8 @@
   }
 
   .navbarLogo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    transform: translateX(-30%);
+    transition: var(--transition);
   }
 
   .menuIcon {
@@ -127,16 +123,16 @@
 
   .navLinksMobile {
     display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
     width: 80%;
+    margin: 2rem auto;
+    padding: 14px 20px;
+    text-align: center;
     text-decoration: none;
     font-size: 1.5rem;
-    background-color: transparent;
     color: var(--accent);
-    padding: 14px 20px;
+    background-color: transparent;
     border: 1px solid var(--accent);
+    border-radius: 4px;
     transition: all 0.3s ease-out;
   }
 

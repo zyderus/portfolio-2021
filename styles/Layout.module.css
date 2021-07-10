@@ -4,12 +4,35 @@
   min-height: 100vh;
 }
 
-/* .header {
-} */
+.header {
+  padding: 0 50px;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--nav-color);
+  box-shadow: 0 10px 30px -10px var(--shadow-color);
+}
 
 .content {
   flex-grow: 1;
 }
 
+.main {
+  margin: 0px auto;
+  padding: 0 150px;
+  width: 100%;
+  max-width: 1600px;
+}
+
 /* .footer {
 } */
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: calc(var(--nav-height) - 30px);
+  }
+}

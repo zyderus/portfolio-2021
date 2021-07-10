@@ -1,67 +1,28 @@
 :root {
-  --navbar-height: 80px;
-  --primary: #333;
-  --secondary: #777;
+  --nav-height: 100px;
+  --primary: #505050;
+  --secondary: #989898;
   --bg-primary: #fff;
   --bg-secondary: #ccc;
   --accent: #095f9d;
+  --nav-color: hsla(0, 0%, 90%, 0.85);
+  --shadow-color: rgba(2, 12, 27, 0.7);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary);
 }
 
 section {
-  min-height: calc(100vh - var(--navbar-height));
-}
-
-.intro,
-.about,
-.experience,
-.work,
-.contact {
-  border: 1px solid yellowgreen;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* .intro {
-} */
-
-.about {
-  background-color: #48a3a3;
-  /* background-image: url('../assets/images/pyramids.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
-
-.experience {
-  background-color: #9b966e;
-  /* background-image: url('../assets/images/tropics.jpg'); */
-  /* background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
-
-.work {
-  background-color: #8d6394;
-  /* background-image: url('../assets/images/tropics.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
-
-.contact {
-  background-color: #397e42;
-  /* background-image: url('../assets/images/river.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 li {
@@ -105,7 +66,7 @@ button:focus {
   color: var(--accent);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .fa-times {
     color: var(--primary);
     font-size: 2rem;
