@@ -1,7 +1,82 @@
 .content {
   display: flex;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.list_container {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.list {
+  padding-left: 1rem;
+  padding-right: 25%;
+  columns: 2;
+  column-gap: 30px;
 }
 
 .li {
+  font-family: courier;
+  color: var(--accent);
   list-style-type: disc;
+}
+
+.img_container {
+  max-width: 250px;
+  height: 100%;
+  min-width: 200px;
+  margin-left: 50px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(3deg);
+  transition: var(--transition);
+}
+.img_container:hover {
+  transform: rotate(0);
+}
+
+.img_container::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 7px);
+  width: 100%;
+  border: 3px solid var(--secondary);
+  border-radius: 4px;
+  transform: rotate(-10deg);
+  transition: var(--transition);
+}
+.img_container:hover::after {
+  transform: rotate(0);
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .img_container {
+    margin: 20px auto 0;
+  }
+
+  .list {
+    padding-right: 0;
+  }
+}
+
+.image {
+  border-radius: 4px;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+
+.image:hover {
+  filter: grayscale(0);
+  transition: var(--transition);
 }

@@ -12,9 +12,6 @@ export default function Home() {
         <About />
       </section>
       <section>
-        <h1>EXPERIENCE Section</h1>
-      </section>
-      <section>
         <h1>WORK Section</h1>
       </section>
       <section>

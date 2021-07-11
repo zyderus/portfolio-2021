@@ -20,9 +20,50 @@
 
 section {
   min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 100px;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0 5%;
+  }
+}
+
+.heading {
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  margin-right: 0.7rem;
+  white-space: nowrap;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  width: 330px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  bottom: 9px;
+}
+
+@media screen and (max-width: 1000px) {
+  .heading::after {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading::after {
+    width: 100%;
+  }
 }
 
 li {

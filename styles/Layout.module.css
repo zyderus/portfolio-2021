@@ -15,6 +15,7 @@
   width: 100%;
   background-color: var(--nav-color);
   box-shadow: 0 10px 30px -10px var(--shadow-color);
+  z-index: 10;
 }
 
 .content {
@@ -23,9 +24,6 @@
 
 .main {
   margin: 0px auto;
-  padding: 0 150px;
-  width: 100%;
-  max-width: 1600px;
 }
 
 /* .footer {
