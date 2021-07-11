@@ -39,7 +39,7 @@
 .small:hover,
 .medium:hover,
 .large:hover {
-  background: var(--bg-secondary);
+  background: var(--secondary);
   /* color: var(--bg-primary); */
   transition: all 0.15s ease-out;
 }

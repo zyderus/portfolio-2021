@@ -1,6 +1,9 @@
 import styles from '../styles/index.module.css'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Work from '../components/Work'
+import WorkOther from '../components/WorkOther'
+import Contact from '../components/Contact'
 
 export default function Home() {
   return (
@@ -12,10 +15,13 @@ export default function Home() {
         <About />
       </section>
       <section>
-        <h1>WORK Section</h1>
+        <Work />
       </section>
       <section>
-        <h1>CONTACT Section</h1>
+        <WorkOther />
+      </section>
+      <section>
+        <Contact />
       </section>
     </>
   )

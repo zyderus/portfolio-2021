@@ -72,7 +72,7 @@
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: #e6e6e6;
+    background-color: var(--bg-secondary);
     box-shadow: -10px 0px 30px -15px var(--shadow-color);
     display: flex;
     flex-direction: column;
