@@ -9,6 +9,7 @@
   --shadow-color: rgba(2, 12, 27, 0.7);
   --border-radius: 4px;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --quick-transition: all 0.15s ease-in-out;
 
   /* Scrollbar */
   --scrollbar-background: #ececec;
@@ -54,6 +55,11 @@ section {
   display: flex;
   align-items: center;
   padding: 0 100px;
+}
+
+section#work {
+  /* border: 1px solid blue; */
+  max-width: 1200px;
 }
 
 @media screen and (max-width: 768px) {

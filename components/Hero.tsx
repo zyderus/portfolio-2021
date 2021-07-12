@@ -7,7 +7,7 @@ const Hero = () => {
       <p className='accent'>Hi, my name is</p>
       <br />
       <h1 className={styles.title__name}>Rustam Ziyadov.</h1>
-      <h1 className={styles.title__slogan}>I enjoy building stuff for the web.</h1>
+      <h1 className={styles.title__slogan}>I build things with code.</h1>
       <br />
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in

@@ -12,7 +12,7 @@ const About = () => {
       <div className={styles.content}>
         <div className={styles.info}>
           <p>
-            Hello! My name is Rustam and I enjoy making stuff that live on the web and mobile app stores. Lorem ipsum,
+            Hello! My name is Rustam and I enjoy making stuff that live on the web and run on mobiles. Lorem ipsum,
             dolor sit amet consectetur adipisicing elit. Eaque debitis inventore hic doloremque libero beatae!
           </p>
           <br />

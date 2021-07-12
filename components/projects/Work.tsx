@@ -1,7 +1,5 @@
-import styles from '../styles/WorkOther.module.css'
-import Image from 'next/image'
-import Button from './Button'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
+import styles from '../../styles/Work.module.css'
+import Feature from '../projects/Feature'
 
 const projectList = [
   {
@@ -34,63 +32,23 @@ const projectList = [
   },
 ]
 
-const Project = ({ title, description, techs, img }: any) => {
+const projects = projectList.map(({ title, description, techs, img }, idx: number) => {
   return (
-    <li className={styles.list_item}>
-      <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.description}>{description}</p>
-        <ul className={styles.tech_list}>
-          {techs.map((tech: string | null, idx: number | null) => {
-            return (
-              <li className={styles.tech_li} key={idx}>
-                {tech}
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-      <div className={styles.img_container}>
-        <Image className={styles.img} src={img} width={400} height={220} alt={title} />
-      </div>
+    <li className={styles.list_item} key={idx}>
+      <Feature title={title} description={description} techs={techs} img={img} />
     </li>
   )
-}
-
-const projects = projectList.map(({ title, description, techs, img }, idx: number) => {
-  return <Project key={idx} title={title} description={description} techs={techs} img={img} />
 })
 
-const WorkOther = () => {
+const Work = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.work}>
       <div className='heading'>
-        <h1>Other Things I&apos;ve Built</h1>
+        <h1>Things I&apos;ve Made</h1>
       </div>
-      <br />
-      <ul>
-        <li className={styles.lis}>
-          <div className={styles.content}>
-            <h1>Header</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident
-              tempore, odio cum fugiat ratione voluptatum officia quod sed?
-            </p>
-          </div>
-          <div className={styles.image_container}>
-            <Image className={styles.img} src={'/assets/images/tron.png'} alt='kukuku' width={550} height={300} />
-          </div>
-        </li>
-      </ul>
-      <div className='btn-container'>
-        <Button style='outline' size='large'>
-          View List
-        </Button>
-      </div>
-
       <ul className={styles.list}>{projects}</ul>
     </div>
   )
 }
 
-export default WorkOther
+export default Work
