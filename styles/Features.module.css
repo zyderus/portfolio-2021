@@ -4,9 +4,9 @@
 }
 
 .list_item {
-  margin: 2rem 0 10rem;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  margin: 2rem 0 7rem;
+  /* font-size: 1.2rem; */
+  line-height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,12 +27,12 @@
 }
 
 .list_item:nth-child(odd) > div:last-child {
-  transform: rotate(2deg) translateY(2rem);
+  /* transform: rotate(1deg) translateY(2rem); */
 }
 
 .list_item:nth-child(even) > div:last-child {
   margin-left: -12%;
-  transform: rotate(-2deg) translateY(2rem);
+  /* transform: rotate(-1deg) translateY(2rem); */
 }
 
 .list_item:nth-child(odd) div ul:last-child {

@@ -1,7 +1,4 @@
-import styles from '../../styles/Work.module.css'
-import Feature from '../projects/Feature'
-
-const projectList = [
+export const features = [
   {
     title: 'Tron Movies',
     techs: ['Node', 'Express', 'MongoDB', 'Bootstrap'],
@@ -31,24 +28,3 @@ const projectList = [
     img: 'https://images.unsplash.com/photo-1577475992478-eeeefa34551c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
   },
 ]
-
-const projects = projectList.map(({ title, description, techs, img }, idx: number) => {
-  return (
-    <li className={styles.list_item} key={idx}>
-      <Feature title={title} description={description} techs={techs} img={img} />
-    </li>
-  )
-})
-
-const Work = () => {
-  return (
-    <div className={styles.work}>
-      <div className='heading'>
-        <h1>Things I&apos;ve Made</h1>
-      </div>
-      <ul className={styles.list}>{projects}</ul>
-    </div>
-  )
-}
-
-export default Work

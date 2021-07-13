@@ -1,8 +1,8 @@
 import styles from '../styles/index.module.css'
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Work from '../components/projects/Work'
-import Projects from '../components/projects/Projects'
+import Work from '../components/Features'
+import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 export default function Home() {

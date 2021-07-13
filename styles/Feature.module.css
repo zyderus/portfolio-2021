@@ -15,28 +15,9 @@
   filter: none;
 }
 
-.sources {
-  fill: #555;
-}
-
-.svg_github {
-  width: 25px;
-  height: auto;
-  transition: var(--quick-transition);
-}
-.svg_github:hover {
-  fill: var(--accent);
-}
-
-.svg_demo {
-  width: 30px;
-  height: auto;
-  transform: translateY(0.15rem);
-  margin-left: 0.7rem;
-  transition: var(--quick-transition);
-}
-.svg_demo:hover {
-  fill: var(--accent);
+.img {
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .title {
@@ -47,8 +28,8 @@
 .description {
   background-color: var(--primary);
   border-radius: 4px;
+  letter-spacing: 0.03rem;
   color: var(--bg-primary);
-  font-weight: 100;
   box-shadow: 0 10px 30px -10px #555;
   padding: 1rem 1.5rem;
 }
@@ -75,9 +56,4 @@
 
 .tech_li:first-child {
   margin-left: 0;
-}
-
-.img {
-  object-fit: cover;
-  border-radius: 4px;
 }

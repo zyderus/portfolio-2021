@@ -1,0 +1,12 @@
+.projects {
+  border: 1px solid green;
+  width: 100%;
+}
+
+.list_item {
+  width: 400px;
+  border-radius: 4px;
+  background-color: #555;
+  box-shadow: var(--box-shadow);
+  margin: 2rem;
+}
