@@ -1,10 +1,25 @@
-.projects {
-  border: 1px solid green;
+/* .projects {
+  border: 1px solid blue;
   width: 100%;
+} */
+
+.scroll {
+  overflow: scroll hidden;
+  position: relative;
+  width: 100vw;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: auto;
 }
 
 .list_item {
-  width: 400px;
+  min-width: 400px;
   border-radius: 4px;
   background-color: #555;
   box-shadow: var(--box-shadow);

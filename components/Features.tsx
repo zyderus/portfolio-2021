@@ -1,18 +1,26 @@
 import styles from '../styles/Features.module.css'
 import Feature from './projects/Feature'
-import { features } from '../constants/features'
+import { features as featuresData } from '../constants/features'
 
-const projects = features.map(({ title, description, techs, img }: any, idx: number) => {
+const projects = featuresData.map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
-    <li className={styles.list_item} key={idx}>
-      <Feature title={title} description={description} techs={techs} img={img} />
+    <li className={styles.list_item} key={id}>
+      <Feature
+        title={title}
+        date={date}
+        description={description}
+        tech={tech}
+        img={img}
+        src={src}
+        src_github={src_github}
+      />
     </li>
   )
 })
 
-const Work = () => {
+const Features = () => {
   return (
-    <div className={styles.work}>
+    <div className={styles.features}>
       <div className='heading'>
         <h1>Things I&apos;ve Made</h1>
       </div>
@@ -21,4 +29,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Features

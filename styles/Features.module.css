@@ -26,9 +26,9 @@
   margin-left: -12%;
 }
 
-.list_item:nth-child(odd) > div:last-child {
-  /* transform: rotate(1deg) translateY(2rem); */
-}
+/* .list_item:nth-child(odd) > div:last-child {
+  transform: rotate(1deg) translateY(2rem);
+} */
 
 .list_item:nth-child(even) > div:last-child {
   margin-left: -12%;

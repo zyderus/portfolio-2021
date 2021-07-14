@@ -3,23 +3,27 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { svg_github, svg_demo } from '../../constants/svgs'
 
-const Feature = ({ title, description, techs, img }: any) => {
+const Feature = ({ title, description, tech, img, src, src_github }: any) => {
   return (
     <>
       <div className={styles.content}>
         <div></div>
         <div className='sources'>
-          <Link href='#github'>
+          <Link href={src_github}>
             <a>{svg_github}</a>
           </Link>
-          <Link href='#demo'>
+          <Link href={src}>
             <a>{svg_demo}</a>
           </Link>
         </div>
-        <h2 className={styles.title}>{title}</h2>
+        <Link href={src}>
+          <a>
+            <h2 className={styles.title}>{title}</h2>
+          </a>
+        </Link>
         <p className={styles.description}>{description}</p>
         <ul className={styles.tech_list}>
-          {techs.map((tech: string | null, idx: number | null) => {
+          {tech.map((tech: string | null, idx: number | null) => {
             return (
               <li className={styles.tech_li} key={idx}>
                 {tech}
@@ -29,7 +33,7 @@ const Feature = ({ title, description, techs, img }: any) => {
         </ul>
       </div>
       <div className={styles.img_container}>
-        <Link href='/about'>
+        <Link href={src}>
           <a>
             <Image className={styles.img} src={img} width={600} height={360} layout='intrinsic' alt={title} />
           </a>

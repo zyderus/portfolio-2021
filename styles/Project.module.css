@@ -2,12 +2,17 @@
   padding: 1rem;
 }
 
+.title a,
 .content p,
 .content h1 {
   color: #eee;
 }
 
-.img_container {
+.title a:hover {
+  color: var(--bg-primary);
+}
+
+.img_container a {
   display: flex;
 }
 
@@ -26,4 +31,27 @@
 
 .svg_github {
   margin-left: 1rem;
+}
+
+.tech_list {
+  margin: 1rem 0 0.6rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tech_li {
+  line-height: 1.3rem;
+  margin: 0 0.1rem;
+  padding: 0 0.3rem;
+  font-family: courier;
+  font-size: 0.95rem;
+  color: var(--bg-primary);
+}
+
+.tech_li:last-child {
+  margin-right: 0;
+}
+
+.tech_li:first-child {
+  margin-left: 0;
 }
