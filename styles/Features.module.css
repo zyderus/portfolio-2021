@@ -1,10 +1,22 @@
-.list {
-  /* border: 1px solid purple; */
-  margin: 4rem 0;
+.heading {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+}
+.heading::before {
+  content: '';
+}
+.heading::after {
+  content: none;
+}
+
+.heading h1 {
+  margin-left: 0.7rem;
 }
 
 .list_item {
-  margin: 2rem 0 7rem;
+  margin: 0 0 7rem;
   /* font-size: 1.2rem; */
   line-height: 1.5rem;
   display: flex;
@@ -13,28 +25,31 @@
   position: relative;
 }
 
+/* external child module Feature.module.css */
 .list_item:nth-child(odd) {
   flex-direction: row-reverse;
   text-align: end;
-}
-
-.list_item:nth-child(odd) div ul {
-  justify-content: flex-end;
 }
 
 .list_item:nth-child(odd) > div:first-child {
   margin-left: -12%;
 }
 
-/* .list_item:nth-child(odd) > div:last-child {
-  transform: rotate(1deg) translateY(2rem);
-} */
-
 .list_item:nth-child(even) > div:last-child {
   margin-left: -12%;
-  /* transform: rotate(-1deg) translateY(2rem); */
 }
 
+.list_item:nth-child(odd) div ul {
+  justify-content: flex-end;
+}
 .list_item:nth-child(odd) div ul:last-child {
   margin-right: 0;
+}
+
+/* .title */
+.list_item:nth-child(odd) div a h2:hover {
+  transform: translateX(2px);
+}
+.list_item:nth-child(even) div a h2:hover {
+  transform: translateX(-2px);
 }

@@ -24,27 +24,29 @@ const Project = ({ title, description, tech, img, src, src_github }: any) => {
           })}
         </ul>
       </div>
-      <div className={styles.img_container}>
-        <Link href={src}>
-          <a>
-            <Image className={styles.img} src={img} alt='ku' width={550} height={300} />
-          </a>
-        </Link>
-      </div>
-      <div className={styles.project_btn_container}>
-        <Link href={src}>
-          <a>
-            <Button style='outline' size='small'>
-              More
-            </Button>
-          </a>
-        </Link>
-        <Link href={src_github}>
-          <a className={styles.svg_github}>{svg_github}</a>
-        </Link>
-        <Link href={src}>
-          <a className={styles.svg_demo}>{svg_demo}</a>
-        </Link>
+      <div>
+        <div className={styles.img_container}>
+          <Link href={src}>
+            <a>
+              <Image className={styles.img} src={img} alt='ku' width={550} height={300} />
+            </a>
+          </Link>
+        </div>
+        <div className={styles.project_btn_container}>
+          <Link href={src}>
+            <a>
+              <Button style='outline' size='small'>
+                More
+              </Button>
+            </a>
+          </Link>
+          <Link href={src_github}>
+            <a className={styles.svg_github}>{svg_github}</a>
+          </Link>
+          <Link href={src}>
+            <a className={styles.svg_demo}>{svg_demo}</a>
+          </Link>
+        </div>
       </div>
     </>
   )

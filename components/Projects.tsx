@@ -23,21 +23,13 @@ const projects = projectsData.map(({ id, title, date, description, tech, img, sr
 })
 
 const Projects = () => {
-  const scroll: any = useRef()
-  const handleWheel = (e: any) => {
-    if (e.deltaY > 0) scroll.current.scrollLeft += 100
-    else scroll.current.scrollLeft -= 100
-  }
-
   return (
     <div className={styles.projects}>
       <div className='heading'>
         <h1>A Few Other Things I&apos;ve Built</h1>
       </div>
 
-      <div className={styles.scroll} ref={scroll} onWheel={handleWheel}>
-        <ul className={styles.list}>{projects}</ul>
-      </div>
+      <ul className={styles.list}>{projects}</ul>
 
       <div className='btn-container'>
         <Link href='#'>

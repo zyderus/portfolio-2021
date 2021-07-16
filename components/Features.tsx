@@ -21,7 +21,7 @@ const projects = featuresData.map(({ id, title, date, description, tech, img, sr
 const Features = () => {
   return (
     <div className={styles.features}>
-      <div className='heading'>
+      <div className={`heading ${styles.heading}`}>
         <h1>Things I&apos;ve Made</h1>
       </div>
       <ul className={styles.list}>{projects}</ul>
