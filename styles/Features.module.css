@@ -15,7 +15,7 @@
   margin-left: 0.7rem;
 }
 
-.list_item {
+.list_item > div {
   margin: 0 0 7rem;
   /* font-size: 1.2rem; */
   line-height: 1.5rem;
@@ -26,30 +26,30 @@
 }
 
 /* external child module Feature.module.css */
-.list_item:nth-child(odd) {
+.list_item:nth-child(odd) div {
   flex-direction: row-reverse;
   text-align: end;
 }
 
-.list_item:nth-child(odd) > div:first-child {
+.list_item:nth-child(odd) > div > div:first-child {
   margin-left: -12%;
 }
 
-.list_item:nth-child(even) > div:last-child {
+.list_item:nth-child(even) > div > div:last-child {
   margin-left: -12%;
 }
 
-.list_item:nth-child(odd) div ul {
+.list_item:nth-child(odd) > div div ul {
   justify-content: flex-end;
 }
-.list_item:nth-child(odd) div ul:last-child {
+.list_item:nth-child(odd) > div div ul:last-child {
   margin-right: 0;
 }
 
 /* .title */
-.list_item:nth-child(odd) div a h2:hover {
+/* .list_item:nth-child(odd) > div div a h2:hover {
   transform: translateX(2px);
 }
-.list_item:nth-child(even) div a h2:hover {
+.list_item:nth-child(even) > div div a h2:hover {
   transform: translateX(-2px);
-}
+} */

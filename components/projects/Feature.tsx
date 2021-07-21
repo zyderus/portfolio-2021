@@ -2,10 +2,13 @@ import styles from '../../styles/Feature.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { svg_github, svg_demo } from '../../constants/svgs'
+import useObserver from '../../utilities/useObserver'
 
 const Feature = ({ title, description, tech, img, src, src_github }: any) => {
+  const [element, isVisible] = useObserver({ threshold: 0.5 })
+
   return (
-    <>
+    <div className={isVisible ? styles.start + ' ' + styles.show : styles.start} ref={element}>
       <div className={styles.content}>
         <div></div>
         <div className='sources'>
@@ -18,10 +21,10 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
         </div>
         <Link href={src}>
           <a>
-            <h2 className={styles.title}>{title}</h2>
+            <h2 className={isVisible ? styles.title + ' ' + styles.show_02 : styles.title}>{title}</h2>
           </a>
         </Link>
-        <p className={styles.description}>{description}</p>
+        <p className={isVisible ? styles.description + ' ' + styles.show_06 : styles.description}>{description}</p>
         <ul className={styles.tech_list}>
           {tech.map((tech: string | null, idx: number | null) => {
             return (
@@ -39,7 +42,7 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
           </a>
         </Link>
       </div>
-    </>
+    </div>
   )
 }
 
