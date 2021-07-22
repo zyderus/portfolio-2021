@@ -56,21 +56,21 @@ const Navbar = () => {
           <li className={styles.navItem}>
             <Link href='/about'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                About
+                .about()
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/work'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                Work
+                .work()
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/contact'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                Contact
+                .contact()
               </a>
             </Link>
           </li>

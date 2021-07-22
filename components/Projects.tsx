@@ -3,10 +3,9 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Button from './Button'
 import Project from './projects/Project'
-import { projects as projectsData } from '../constants/projects'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { projects as list } from '../constants/projects'
 
-const projects = projectsData.map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+const projects = list.map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
     <li className={styles.list_item} key={id}>
       <Project
@@ -26,7 +25,7 @@ const Projects = () => {
   return (
     <div className={styles.projects}>
       <div className='heading'>
-        <h1>A Few Other Things I&apos;ve Built</h1>
+        <h1>.other_things_Ive_built()</h1>
       </div>
 
       <ul className={styles.list}>{projects}</ul>

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className={styles.about}>
       <div className='heading'>
-        <h1>About Me</h1>
+        <h1>.about().me()</h1>
       </div>
       <br />
       <div className={styles.content}>

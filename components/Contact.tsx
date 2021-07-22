@@ -4,7 +4,7 @@ import Button from './Button'
 const Contact = () => {
   return (
     <div className={styles.contact}>
-      <h1 className={styles.title}>Get In Touch</h1>
+      <h1 className={styles.title}>.contact().me()</h1>
       <br />
       <br />
       <p>
@@ -14,7 +14,7 @@ const Contact = () => {
       <br />
       <br />
       <Button style='outline' size='large'>
-        Buzz Me
+        click
       </Button>
     </div>
   )

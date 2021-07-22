@@ -21,10 +21,10 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
         </div>
         <Link href={src}>
           <a>
-            <h2 className={isVisible ? styles.title + ' ' + styles.show_02 : styles.title}>{title}</h2>
+            <h2 className={isVisible ? styles.title + ' ' + styles.show_01 : styles.title}>{title}</h2>
           </a>
         </Link>
-        <p className={isVisible ? styles.description + ' ' + styles.show_06 : styles.description}>{description}</p>
+        <p className={isVisible ? styles.description + ' ' + styles.show_05 : styles.description}>{description}</p>
         <ul className={styles.tech_list}>
           {tech.map((tech: string | null, idx: number | null) => {
             return (

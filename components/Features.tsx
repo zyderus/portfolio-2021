@@ -1,12 +1,13 @@
 import styles from '../styles/Features.module.css'
 import Feature from './projects/Feature'
-import { features as featuresData } from '../constants/features'
+import { projects as features } from '../constants/projects'
+import { featureShape } from '../utilities/sort'
 
-const projects = featuresData.map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+const projects = featureShape(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
     <li className={styles.list_item} key={id}>
       <Feature
-        title={title}
+        title={`${title} ${new Date(date).getFullYear()}`}
         date={date}
         description={description}
         tech={tech}
@@ -22,7 +23,7 @@ const Features = () => {
   return (
     <div className={styles.features}>
       <div className={`heading ${styles.heading}`}>
-        <h1>Things I&apos;ve Made</h1>
+        <h1>.things_Ive_made()</h1>
       </div>
       <ul className={styles.list}>{projects}</ul>
     </div>
