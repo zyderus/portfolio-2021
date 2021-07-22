@@ -1,9 +1,9 @@
 import styles from '../styles/Features.module.css'
 import Feature from './projects/Feature'
 import { projects as features } from '../constants/projects'
-import { featureShape } from '../utilities/sort'
+import { shapeFeatures } from '../utilities/sort'
 
-const projects = featureShape(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+const projects = shapeFeatures(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
     <li className={styles.list_item} key={id}>
       <Feature

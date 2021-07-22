@@ -1,15 +1,15 @@
 import styles from '../styles/Projects.module.css'
-import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Button from './Button'
 import Project from './projects/Project'
 import { projects as list } from '../constants/projects'
+import { shapeProjects } from '../utilities/sort'
 
-const projects = list.map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+const projects = shapeProjects(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
     <li className={styles.list_item} key={id}>
       <Project
-        title={title}
+        title={`${title} ${new Date(date).getFullYear()}`}
         date={date}
         description={description}
         tech={tech}

@@ -1,7 +1,10 @@
 import { Project } from '../interfaces/projects'
 
-// Return feature projects sorted by date descending
-export const featureShape = (list: object[]) =>
-  list
-    .filter((item: any) => item.feature)
-    .sort((a: any, b: any) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+const reverse = (list: Project[]) =>
+  list.sort((a: any, b: any) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+
+// feature projects
+export const shapeFeatures = (list: Project[]) => reverse(list).filter((item: Project) => item.feature)
+
+// projects w/o featured
+export const shapeProjects = (list: Project[]) => reverse(list).filter((item: Project) => !item.feature)
