@@ -1,10 +1,10 @@
 import styles from '../styles/Projects.module.css'
 import Link from 'next/link'
 import Button from './Button'
-import Project from './projects/Project'
+import Project from './elements/Project'
 import { projects as list } from '../constants/projects'
 import { shapeProjects } from '../utilities/sort'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, SyntheticEvent } from 'react'
 
 const projectList = shapeProjects(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => (
   <Project
@@ -24,7 +24,10 @@ const Projects = () => {
   const [viewBtn, setViewBtn] = useState<boolean>(true)
   const [page, setPage] = useState<number>(0)
 
-  const handlePage = () => setPage(page => page + 1)
+  const handlePage = (e: SyntheticEvent) => {
+    e.preventDefault()
+    setPage(page => page + 1)
+  }
 
   useEffect(() => {
     if (page < 1) {

@@ -14,7 +14,7 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
     <li
       className={styles.list_item + ' ' + (isVisible ? styles.start + ' ' + styles.show : styles.start)}
       ref={element}
-      style={{ transitionDelay: `0.${randomDelay(100, 250)}s` }}
+      style={{ transitionDelay: `0.${randomDelay(100, 200)}s` }}
     >
       <div className={styles.content}>
         <h1 className={styles.title}>

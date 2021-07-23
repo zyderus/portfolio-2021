@@ -1,5 +1,5 @@
 import styles from '../styles/Features.module.css'
-import Feature from './projects/Feature'
+import Feature from './elements/Feature'
 import { projects as features } from '../constants/projects'
 import { shapeFeatures } from '../utilities/sort'
 
