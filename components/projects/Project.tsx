@@ -3,10 +3,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button'
 import { svg_demo, svg_github } from '../../constants/svgs'
+import useObserver from '../../utilities/useObserver'
 
-const Project = ({ title, description, tech, img, src, src_github }: any) => {
+const randomDelay = (min: number, max: number) => ~~(Math.random() * (max - min + 1) + min)
+
+const Project = ({ id, title, description, tech, img, src, src_github }: any) => {
+  const [element, isVisible] = useObserver({ rootMargin: '0px 0px 0px -50px' })
+
   return (
-    <>
+    <li
+      className={styles.list_item + ' ' + (isVisible ? styles.start + ' ' + styles.show : styles.start)}
+      ref={element}
+      style={{ transitionDelay: `0.${randomDelay(100, 250)}s` }}
+    >
       <div className={styles.content}>
         <h1 className={styles.title}>
           <Link href={src}>
@@ -48,7 +57,7 @@ const Project = ({ title, description, tech, img, src, src_github }: any) => {
           </Link>
         </div>
       </div>
-    </>
+    </li>
   )
 }
 

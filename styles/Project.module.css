@@ -1,3 +1,34 @@
+.start {
+  transform: translateY(20%);
+  opacity: 0;
+  /* transition: all 1s ease-in; */
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: all 1s ease-in; */
+}
+
+.list_item {
+  width: 30%;
+  min-width: 250px;
+  border-radius: 4px;
+  background-color: var(--deep-dark);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-origin: bottom left;
+  filter: grayscale(60%);
+  transition: all 0.2s ease-in;
+}
+
+.list_item:hover {
+  transform: rotate(1deg);
+  filter: none;
+}
+
 .content {
   padding: 1rem;
 }

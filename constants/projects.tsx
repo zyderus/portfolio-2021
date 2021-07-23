@@ -44,7 +44,7 @@ export const projects = [
     date: '2020-12-01',
     tech: ['Typescript'],
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fuit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fugiat ratione voluptatum officia quod sed?',
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fuit amet consectetsed?',
     img: 'https://images.unsplash.com/photo-1577475992478-eeeefa34551c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
     src: '#project-demo',
     src_github: '#project-github',

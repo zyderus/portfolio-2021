@@ -5,7 +5,7 @@ import { svg_github, svg_demo } from '../../constants/svgs'
 import useObserver from '../../utilities/useObserver'
 
 const Feature = ({ title, description, tech, img, src, src_github }: any) => {
-  const [element, isVisible] = useObserver({ threshold: 0.5 })
+  const [element, isVisible] = useObserver({})
 
   return (
     <div className={isVisible ? styles.start + ' ' + styles.show : styles.start} ref={element}>

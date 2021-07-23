@@ -1,38 +1,6 @@
-/* .projects {
-  border: 1px solid blue;
-  width: 100%;
-} */
-
 .list {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: auto; */
-}
-
-.list_item {
-  width: 30%;
-  min-width: 250px;
-  border-radius: 4px;
-  background-color: var(--deep-dark);
-  box-shadow: var(--box-shadow);
-  /* margin: 1rem 2rem; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform-origin: bottom left;
-  transition: var(--transition);
-}
-
-.list_item:hover {
-  transform: rotate(1deg);
-}
-
-.list_item div:nth-child(2) div:first-child {
-  filter: grayscale(60%);
-  transition: var(--transition);
-}
-.list_item:hover div:nth-child(2) div:first-child {
-  filter: none;
 }
