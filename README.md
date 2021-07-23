@@ -4,7 +4,7 @@
 </div>
 
 <p align="center">
-  View @ https://next-tuts-g6xp1s7fp-zyderus.vercel.app | hosted with <a href="https://vercel.com/">vercel</a>
+  🚀 View @ https://next-tuts-g6xp1s7fp-zyderus.vercel.app | hosted with <a href="https://vercel.com/">vercel</a>
 </p>
 
 <p align="center">
