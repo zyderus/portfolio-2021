@@ -63,7 +63,7 @@ const Navbar = () => {
           <li className={styles.navItem}>
             <Link href='/work'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                .work()
+                .experience()
               </a>
             </Link>
           </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
               <Link href='/contact'>
                 <a className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
                   <Button style={'outline'} size={'medium'}>
-                    Resume
+                    resume
                   </Button>
                 </a>
               </Link>
