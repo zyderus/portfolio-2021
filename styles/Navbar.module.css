@@ -24,21 +24,6 @@
   transition: var(--transition);
 }
 
-.themeContainer {
-  display: flex;
-  align-items: center;
-}
-
-.themeBtn {
-  border: 1px solid #000;
-  margin-left: 1rem;
-  padding: 0.2rem 0.5rem;
-  cursor: pointer;
-}
-.themeBtn:hover {
-  background-color: lightblue;
-}
-
 .navMenu {
   display: flex;
   list-style: none;

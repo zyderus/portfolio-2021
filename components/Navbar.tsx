@@ -6,31 +6,16 @@ import Button from './Button'
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
-  const [isDark, setIsDark] = useState(false)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
   const showButton = () => (window.innerWidth <= 768 ? setButton(false) : setButton(true))
-  const toggleTheme = () => setIsDark(!isDark)
-
-  // Theme manipulation
-  const setTheme = (theme: any) => {
-    theme = theme ? 'dark' : ''
-    document.documentElement.className = theme
-    localStorage.setItem('theme', theme)
-  }
-  const getTheme = () => {
-    const theme: any = localStorage.getItem('theme')
-    setIsDark(theme)
-  }
 
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', showButton)
   }
 
   useEffect(() => showButton(), [])
-  useEffect(() => getTheme(), [])
-  useEffect(() => setTheme(isDark), [isDark])
 
   return (
     <>
@@ -41,11 +26,6 @@ const Navbar = () => {
               RZ <i className='fab fa-typo3'></i>
             </a>
           </Link>
-          <div className={styles.themeContainer}>
-            <div className={styles.themeBtn} onClick={toggleTheme}>
-              {isDark ? 'dark' : 'light'}
-            </div>
-          </div>
 
           <div className={styles.menuIcon} onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>

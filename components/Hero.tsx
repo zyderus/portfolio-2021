@@ -1,9 +1,16 @@
 import styles from '../styles/Hero.module.css'
+import { useContext } from 'react'
 import Button from './Button'
+import { LocaleContext } from './Layout'
 
 const Hero = () => {
+  const { t } = useContext(LocaleContext)
+
   return (
     <div className={styles.hero}>
+      <h1>{t.title}</h1>
+      <p>{t.p}</p>
+      <br />
       <p className='accent'>Hi, my name is</p>
       <br />
       <h1 className={styles.title__name}>Rustam Ziyadov,</h1>
