@@ -42,15 +42,11 @@ Next js, Typescript
 
    ```sh
    npm run build
-   ```
-   
----
+   ```  
 
 ## Contributors
 
 - Rustam Ziyadov
-
----
 
 ## License & copyright
 
