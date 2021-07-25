@@ -6,8 +6,10 @@ import Control from './Control'
 import useLocaleRouter from '../utilities/useLocaleRouter'
 
 export const LocaleContext: any = createContext({
+  defaultLocale: '',
   locale: '',
   locales: [],
+  pathname: '',
   asPath: '',
   t: {},
 })
@@ -15,14 +17,17 @@ export const LocaleContext: any = createContext({
 type Props = { children: JSX.Element | JSX.Element[] }
 
 const Layout: React.FC<Props> = ({ children }) => {
-  const { locale, locales, asPath, t } = useLocaleRouter()
+  const { defaultLocale, locale, locales, pathname, asPath, push, t } = useLocaleRouter()
 
   return (
     <LocaleContext.Provider
       value={{
+        defaultLocale,
         locale,
         locales,
+        pathname,
         asPath,
+        push,
         t,
       }}
     >

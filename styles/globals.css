@@ -1,5 +1,5 @@
-.border {
-  border: 1px solid red;
+* {
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -32,7 +32,7 @@
 :root.dark {
   --primary: #ddd;
   --color-primary: #ddd;
-  --secondary: #f1f1f1;
+  --secondary: #999;
   --bg-primary: #555;
   --bg-secondary: #333;
   --nav-color: #333;

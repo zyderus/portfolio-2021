@@ -5,7 +5,7 @@ import es from '../locales/es'
 
 const useLocaleRouter = () => {
   const router = useRouter()
-  const { locale, locales, asPath } = router
+  const { defaultLocale, locale, locales, pathname, asPath, push } = router
   let t
   switch (locale) {
     case 'ru':
@@ -19,9 +19,12 @@ const useLocaleRouter = () => {
   }
 
   return {
+    defaultLocale,
     locale,
     locales,
+    pathname,
     asPath,
+    push,
     t,
   }
 }
