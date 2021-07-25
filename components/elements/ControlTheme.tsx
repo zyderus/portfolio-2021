@@ -1,5 +1,5 @@
 import styles from '../../styles/ControlNavigation.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, SyntheticEvent } from 'react'
 
 const ControlTheme = () => {
   let autoTheme = 'light'
@@ -14,7 +14,8 @@ const ControlTheme = () => {
     setThemeName('dark')
     setIsUserTheme(true)
   }
-  const handleReset = () => {
+  const handleReset = (e: SyntheticEvent) => {
+    e.preventDefault()
     setThemeName(autoTheme)
     setTheme(null)
     setIsUserTheme(false)
@@ -44,28 +45,30 @@ const ControlTheme = () => {
   }, [themeName, isUserTheme])
 
   return (
-    <div className={styles.ControlTheme}>
-      <ul className={styles.list}>
-        <li className={styles.selection_item}>
-          <a onClick={handleReset}>
-            {themeName === 'dark' ? <i className='fas fa-moon'></i> : <i className='fas fa-sun'></i>}
-            {isUserTheme ? <i className={`fas fa-lock ${styles.lock_icon}`}></i> : null}
+    <ul className={`${styles.list} ${styles.theme}`}>
+      <li className={styles.selection_item}>
+        <a onClick={handleReset}>
+          {themeName === 'dark' ? (
+            <i className={`fas fa-moon ${styles.icon_moon}`}></i>
+          ) : (
+            <i className='fas fa-sun'></i>
+          )}
+          {isUserTheme ? <i className={`fas fa-lock ${styles.icon_lock}`}></i> : null}
+        </a>
+      </li>
+      <ul className={styles.popup_list}>
+        <li className={styles.list_item}>
+          <a onClick={handleDark}>
+            <i className={`fas fa-moon ${styles.icon_moon}`}></i>
           </a>
         </li>
-        <ul className={styles.popup_list}>
-          <li className={styles.list_item}>
-            <a onClick={handleDark}>
-              <i className='fas fa-moon'></i>
-            </a>
-          </li>
-          <li className={styles.list_item}>
-            <a onClick={handleLight}>
-              <i className='fas fa-sun'></i>
-            </a>
-          </li>
-        </ul>
+        <li className={styles.list_item}>
+          <a onClick={handleLight}>
+            <i className='fas fa-sun'></i>
+          </a>
+        </li>
       </ul>
-    </div>
+    </ul>
   )
 }
 

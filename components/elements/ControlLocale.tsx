@@ -1,5 +1,5 @@
 import styles from '../../styles/ControlNavigation.module.css'
-import { useContext, useState, useEffect, useRef } from 'react'
+import { useContext, useState, useEffect, useRef, SyntheticEvent } from 'react'
 import Link from 'next/link'
 import { LocaleContext } from '../Layout'
 
@@ -31,6 +31,7 @@ const ControlLocale = () => {
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => getLang(), [])
   useEffect(() => {
     if (isSelected) {
@@ -41,28 +42,28 @@ const ControlLocale = () => {
   }, [locale, isSelected])
 
   return (
-    <div className={styles.ControlLocale}>
-      <ul className={styles.list}>
-        <li className={styles.selection_item}>
-          <Link href={asPath} locale={defaultLocale} scroll={false}>
-            <a onClick={handleLangReset}>
-              {locale.toUpperCase()}
-              {isSelected ? <i className={`fas fa-lock ${styles.lock_icon}`}></i> : null}
-            </a>
-          </Link>
-        </li>
+    <ul className={`${styles.list} ${styles.locale}`}>
+      <li className={styles.selection_item}>
+        <Link href={asPath} locale={defaultLocale} scroll={false}>
+          <a href={void 0} onClick={handleLangReset}>
+            {locale.toUpperCase()}
+            {isSelected ? <i className={`fas fa-lock ${styles.icon_lock}`}></i> : null}
+          </a>
+        </Link>
+      </li>
 
-        <ul className={styles.popup_list}>
-          {locales.map((locale: any) => (
-            <li className={styles.list_item} key={locale}>
-              <Link href={asPath} locale={locale} scroll={false}>
-                <a onClick={handleLangSelect}>{locale.toUpperCase()}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <ul className={styles.popup_list}>
+        {locales.map((locale: any) => (
+          <li className={styles.list_item} key={locale}>
+            <Link href={asPath} locale={locale} scroll={false}>
+              <a href={void 0} onClick={handleLangSelect}>
+                {locale.toUpperCase()}
+              </a>
+            </Link>
+          </li>
+        ))}
       </ul>
-    </div>
+    </ul>
   )
 }
 
