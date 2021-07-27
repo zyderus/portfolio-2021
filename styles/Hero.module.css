@@ -1,15 +1,15 @@
-.title__name {
+.title_name {
   color: var(--primary);
   line-height: 1.15;
-  font-size: 68px;
+  font-size: 4.2rem;
   font-weight: bold;
   letter-spacing: -0.15rem;
 }
 
-.title__slogan {
+.title_slogan {
   color: var(--secondary);
   margin: 0;
   line-height: 1.15;
-  font-size: 62px;
+  font-size: 3.8rem;
   letter-spacing: -0.15rem;
 }

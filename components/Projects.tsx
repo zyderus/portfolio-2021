@@ -41,23 +41,25 @@ const Projects = () => {
   }, [page])
 
   return (
-    <div className={styles.projects}>
-      <div className='heading'>
-        <h1>.other_things_Ive_built()</h1>
-      </div>
+    <section id='projects'>
+      <div className={styles.projects}>
+        <div className='heading'>
+          <h1>Other Things I&apos;ve Made</h1>
+        </div>
 
-      <ul className={styles.list}>{projects}</ul>
+        <ul className={styles.list}>{projects}</ul>
 
-      <div className='btn-container'>
-        <Link href='#'>
-          <a>
-            <Button style='outline' size='large' click={viewBtn ? handlePage : () => console.log('ku')}>
-              {viewBtn ? 'View More' : 'View Archive'}
-            </Button>
-          </a>
-        </Link>
+        <div className='btn-container'>
+          <Link href='#'>
+            <a>
+              <Button style='outline' size='large' click={viewBtn ? handlePage : () => console.log('ku')}>
+                {viewBtn ? 'View More' : 'View Archive'}
+              </Button>
+            </a>
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,8 +1,8 @@
 import styles from '../styles/Layout.module.css'
 import { createContext } from 'react'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import Control from './Control'
+import Footer from '../components/Footer'
 import useLocaleRouter from '../utilities/useLocaleRouter'
 
 export const LocaleContext: any = createContext({
@@ -14,7 +14,7 @@ export const LocaleContext: any = createContext({
   t: {},
 })
 
-type Props = { children: JSX.Element | JSX.Element[] }
+type Props = { children: JSX.Element | JSX.Element[] | null }
 
 const Layout: React.FC<Props> = ({ children }) => {
   const { defaultLocale, locale, locales, pathname, asPath, push, t } = useLocaleRouter()
@@ -32,14 +32,10 @@ const Layout: React.FC<Props> = ({ children }) => {
       }}
     >
       <div className={styles.wrapper}>
-        <header className={styles.header}>
-          <Navbar />
-        </header>
-        <div className={styles.content}>
-          <div className={styles.main}>{children}</div>
-        </div>
+        <Navbar />
         <Control />
-        <footer className={styles.footer}>
+        <main>{children}</main>
+        <footer>
           <Footer />
         </footer>
       </div>

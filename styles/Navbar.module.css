@@ -4,8 +4,20 @@
   align-items: center;
   font-size: 1rem;
   width: 100%;
-  /* position: sticky; */
-  /* top: 0; */
+  padding: 0 50px;
+  background-color: var(--nav-color);
+  position: fixed;
+  top: 0;
+  height: var(--nav-height);
+  box-shadow: 0 10px 30px -10px var(--shadow-color);
+  transition: var(--transition);
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: calc(var(--nav-height) - 30px);
+  }
 }
 
 .logoContainer {
@@ -30,9 +42,6 @@
   text-align: center;
   align-items: center;
 }
-
-/* .navItem {
-} */
 
 .navLinks {
   color: var(--primary);
@@ -141,7 +150,6 @@
 
   .navLinksMobile:hover {
     background: #fff;
-    /* color: #242424; */
     transition: 250ms;
   }
 }

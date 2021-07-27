@@ -21,12 +21,14 @@ const projects = shapeFeatures(features).map(({ id, title, date, description, te
 
 const Features = () => {
   return (
-    <div className={styles.features}>
-      <div className={`heading ${styles.heading}`}>
-        <h1>.things_Ive_made()</h1>
+    <section id='features'>
+      <div className={styles.features}>
+        <div className={`heading ${styles.heading}`}>
+          <h1>Things I&apos;ve Built</h1>
+        </div>
+        <ul className={styles.list}>{projects}</ul>
       </div>
-      <ul className={styles.list}>{projects}</ul>
-    </div>
+    </section>
   )
 }
 

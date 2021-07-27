@@ -7,24 +7,26 @@ const Hero = () => {
   const { t } = useContext(LocaleContext)
 
   return (
-    <div className={styles.hero}>
-      <h1>{t.title}</h1>
-      <p>{t.p}</p>
-      <br />
-      <p className='accent'>Hi, my name is</p>
-      <br />
-      <h1 className={styles.title__name}>Rustam Ziyadov,</h1>
-      <h1 className={styles.title__slogan}>and I build things with code.</h1>
-      <br />
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
-        veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
-      </p>
-      <br />
-      <Button style='outline' size='large'>
-        Message Me
-      </Button>
-    </div>
+    <section>
+      <div className={styles.hero}>
+        <h1>{t.title}</h1>
+        <p>{t.p}</p>
+        <br />
+        <p className='accent'>Hi, my name is</p>
+        <br />
+        <h1 className={styles.title_name}>Rustam Ziyadov,</h1>
+        <h1 className={styles.title_slogan}>and I build things with code.</h1>
+        <br />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
+          veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
+        </p>
+        <br />
+        <Button style='outline' size='large'>
+          Message Me
+        </Button>
+      </div>
+    </section>
   )
 }
 

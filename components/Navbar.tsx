@@ -36,21 +36,21 @@ const Navbar = () => {
           <li className={styles.navItem}>
             <Link href='/about'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                .about()
+                About
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/work'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                .experience()
+                Experience
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/contact'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                .contact()
+                Contact
               </a>
             </Link>
           </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link href='/contact'>
                 <a className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
                   <Button style={'outline'} size={'medium'}>
-                    resume
+                    Resume
                   </Button>
                 </a>
               </Link>
