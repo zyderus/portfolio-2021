@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className={styles.logoContainer}>
           <Link href='/'>
             <a className={styles.navbarLogo} onClick={closeMobileMenu}>
-              RZ <i className='fab fa-typo3'></i>
+              <h1>RZ</h1>
             </a>
           </Link>
 

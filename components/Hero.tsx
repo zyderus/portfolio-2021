@@ -9,21 +9,15 @@ const Hero = () => {
   return (
     <section>
       <div className={styles.hero}>
-        <h1>{t.title}</h1>
-        <p>{t.p}</p>
+        <p className={styles.intro}>{`${t.greet}, ${t.intro}`}</p>
         <br />
-        <p className='accent'>Hi, my name is</p>
+        <h1 className={styles.title_name}>{`${t.firstName} ${t.lastName},`}</h1>
+        <h1 className={styles.title_slogan}>{`${t.slogan}.`}</h1>
         <br />
-        <h1 className={styles.title_name}>Rustam Ziyadov,</h1>
-        <h1 className={styles.title_slogan}>and I build things with code.</h1>
-        <br />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
-          veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
-        </p>
+        <p>{t.aboutResume}</p>
         <br />
         <Button style='outline' size='large'>
-          Message Me
+          {t.btnMessageMe}
         </Button>
       </div>
     </section>

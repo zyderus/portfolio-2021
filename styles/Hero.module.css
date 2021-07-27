@@ -1,15 +1,19 @@
+.intro {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .title_name {
   color: var(--primary);
-  line-height: 1.15;
   font-size: 4.2rem;
-  font-weight: bold;
+  line-height: 1.15;
   letter-spacing: -0.15rem;
 }
 
 .title_slogan {
   color: var(--secondary);
   margin: 0;
-  line-height: 1.15;
   font-size: 3.8rem;
+  line-height: 1.15;
   letter-spacing: -0.15rem;
 }

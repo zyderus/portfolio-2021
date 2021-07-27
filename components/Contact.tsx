@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className={styles.contact}>
-      <h1 className={styles.title}>.contact().me()</h1>
+      <h1>.contact().me()</h1>
       <br />
       <br />
       <p>

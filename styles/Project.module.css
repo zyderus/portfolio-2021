@@ -33,12 +33,6 @@
   padding: 1rem;
 }
 
-.title a,
-.content p,
-.content h1 {
-  color: #eee;
-}
-
 .title a:hover {
   color: var(--bg-primary);
 }

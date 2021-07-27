@@ -1,13 +1,11 @@
 :root {
-  --primary: #313131;
-  --bg-primary: #ffffff;
+  --primary: #41464e;
+  --secondary: #5d6572;
+  --accent: #4267b2;
+  --bg-primary: #fff;
+  --bg-secondary: #eee;
 
   --nav-height: 100px;
-  /* --primary: #505050; */
-  --secondary: #989898;
-  /* --bg-primary: #fff; */
-  --bg-secondary: #ececec;
-  --accent: #095f9d;
   --nav-color: rgba(230, 230, 230, 0.851);
   --shadow-color: rgba(2, 12, 27, 0.7);
   --border-radius: 4px;
@@ -110,6 +108,12 @@ section#projects {
   section {
     padding: 0 5%;
   }
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Roboto', serif;
+  font-weight: 900;
 }
 
 .heading {

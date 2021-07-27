@@ -11,10 +11,6 @@
   content: none;
 }
 
-.heading h1 {
-  margin-left: 0.7rem;
-}
-
 .list_item > div {
   margin: 0 0 7rem;
   /* font-size: 1.2rem; */

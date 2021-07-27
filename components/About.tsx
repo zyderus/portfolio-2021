@@ -24,7 +24,7 @@ const About = () => {
               quasi nesciunt blanditiis doloremque assumenda.
             </p>
             <br />
-            <p>Some of the technologies I use most often:</p>
+            <p>My Usual Toolset:</p>
             <br />
             <div className={styles.list_container}>
               <ul className={styles.list}>
