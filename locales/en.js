@@ -12,6 +12,6 @@ export default {
   lastName: 'Ziyadov',
   slogan: 'and I build things with code',
   aboutResume:
-    'I am a Software Developer focusing in development, sometimes design, of functional and people-friendly applications for the web and mobile environment. Mostly, I am about problem-solving, and still can appreciate a good joke.',
+    'I am a Software Developer focusing in development, sometimes design, of functional and people-friendly applications. Mostly, I am about problem-solving, and still can appreciate a good joke.',
   btnMessageMe: 'Message Me',
 }

@@ -22,14 +22,16 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         <div className={styles.logoContainer}>
           <Link href='/'>
-            <a className={styles.navbarLogo} onClick={closeMobileMenu}>
+            <a onClick={closeMobileMenu}>
               <h1>RZ</h1>
             </a>
           </Link>
+        </div>
 
-          <div className={styles.menuIcon} onClick={handleClick}>
+        <div className={styles.menuIcon} onClick={handleClick}>
+          <h1>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </div>
+          </h1>
         </div>
 
         <ul className={click ? styles.navMenu + ' ' + styles.active : styles.navMenu}>

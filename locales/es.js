@@ -12,6 +12,6 @@ export default {
   lastName: 'Ziyadov',
   slogan: 'y construyo cosas con código',
   aboutResume:
-    'Soy un desarrollador de software que se enfoca en el desarrollo, a veces en el diseño, de aplicaciones funcionales y amigables para las personas para el entorno web y móvil. Principalmente, me dedico a la resolución de problemas y todavía puedo apreciar un buen chiste.',
+    'Soy un desarrollador de software enfocado en el desarrollo de aplicaciones funcionales y amigables para las personas. Sobre todo, me dedico a la resolución de problemas y todavía puedo apreciar un buen chiste.',
   btnMessageMe: 'Mensajeame',
 }
