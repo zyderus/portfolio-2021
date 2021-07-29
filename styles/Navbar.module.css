@@ -2,7 +2,6 @@
   height: var(--nav-height);
   width: 100%;
   padding: 0 3.2rem;
-  font-size: 1rem;
   background-color: var(--bg-primary-transparent);
   position: fixed;
   top: 0;
@@ -26,8 +25,13 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+}
+
 .logoContainer {
-  border: 1px solid green;
   transition: all 0.3s ease-in;
 }
 
@@ -35,20 +39,10 @@
   color: var(--accent);
 }
 
-/* =========================================================== */
 .menuIcon {
-  border: 1px solid blue;
-  /* line-height: 1rem; */
   display: none;
-  transition: none;
+  cursor: pointer;
   z-index: 10;
-}
-
-@media screen and (max-width: 768px) {
-  /* .logoContainer {
-    transform: translateX(-30%);
-    transition: var(--transition);
-  } */
 }
 
 .navMenu {
@@ -66,30 +60,33 @@
   padding: 0 1rem;
 }
 
+.navLinks:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  transition: all 0.15s ease-out;
+}
+
 .resumeButton {
   padding: 0;
   padding-left: 0.5rem;
 }
 
-.navLinks:hover {
-  color: coral;
-  transition: all 0.15s ease-out;
+.resumeButton:hover {
+  text-decoration: none;
 }
 
-.navLinksMobile {
-  display: block;
-  white-space: nowrap;
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  z-index: 8;
 }
 
 @media screen and (max-width: 768px) {
-  /* ======================================================== */
   .menuIcon {
-    cursor: pointer;
     display: block;
-  }
-
-  .NavbarItems {
-    position: relative;
+    z-index: 10;
   }
 
   .navMenu {
@@ -99,37 +96,35 @@
     right: 0;
     padding: 50px 10px;
     width: min(75vw, 400px);
-    height: 100vh;
-    outline: 0;
     background-color: var(--bg-secondary);
     box-shadow: -10px 0px 30px -15px var(--shadow-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     right: -430px;
-    transform: translateX(0vw);
-    visibility: visible;
-    transition: 300ms;
+    transition: all 150ms;
     z-index: 9;
   }
 
   .navMenu.active {
     right: 0;
-    transition: 200ms;
-    z-index: 1;
+  }
+
+  .navMenu li {
+    width: 100%;
   }
 
   .navLinks {
     text-align: center;
     padding: 2rem;
-    width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .navLinks:hover {
-    background-color: #fff;
-    color: #242424;
+    background-color: var(--bg-primary);
+    color: var(--primary);
+    text-decoration: none;
     border-radius: 0;
   }
 
@@ -140,7 +135,7 @@
     padding: 14px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--accent);
     background-color: transparent;
     border: 1px solid var(--accent);
@@ -149,7 +144,7 @@
   }
 
   .navLinksMobile:hover {
-    background: #fff;
+    background: var(--bg-primary);
     transition: 250ms;
   }
 }

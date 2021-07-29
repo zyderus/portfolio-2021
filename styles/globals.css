@@ -3,7 +3,7 @@
   --secondary: #5d6572;
   --accent: #4267b2;
   --bg-primary: #ffffff;
-  --bg-primary-transparent: #ffffffdd;
+  --bg-primary-transparent: #ffffffee;
   --bg-secondary: #eee;
 
   --nav-height: 100px;
@@ -29,6 +29,7 @@
   --color-primary: #ddd;
   --secondary: #999;
   --bg-primary: #555;
+  --bg-primary-transparent: #555555ee;
   --bg-secondary: #333;
   --nav-color: #333;
   --accent: coral;

@@ -15,11 +15,6 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
 .year {
-  color: #0583bd;
+  color: var(--accent);
 }
