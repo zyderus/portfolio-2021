@@ -12,12 +12,6 @@
   z-index: 10;
 }
 
-.navbar_move {
-  height: calc(var(--nav-height) - 30px);
-  background-color: var(--nav-color);
-  box-shadow: 0 10px 30px -10px var(--shadow-color);
-}
-
 @media screen and (max-width: 768px) {
   .navbar {
     height: calc(var(--nav-height) - 30px);
@@ -25,7 +19,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .navbar {
     padding: 0 1rem;
   }
@@ -41,14 +35,42 @@
 
 .menuIcon {
   display: none;
+  align-items: center;
   cursor: pointer;
   z-index: 10;
 }
 
 .navMenu {
+  /* border: 1px solid red; */
   display: flex;
   list-style: none;
   text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.navControls {
+  height: calc(var(--nav-height) - 30px);
+  padding-left: 1.2rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  /* background-color: coral; */
+}
+
+.navControls a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  /* width: 100%; */
+}
+
+.navControls div:nth-child(2) {
+  border-right: 1px solid var(--bg-secondary);
+  height: 1.4rem;
+  display: flex;
   align-items: center;
 }
 
@@ -79,13 +101,13 @@
 .overlay {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px) brightness(75%);
   z-index: 8;
 }
 
 @media screen and (max-width: 768px) {
   .menuIcon {
-    display: block;
+    display: flex;
     z-index: 10;
   }
 
@@ -96,7 +118,7 @@
     right: 0;
     padding: 50px 10px;
     width: min(75vw, 400px);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     box-shadow: -10px 0px 30px -15px var(--shadow-color);
     display: flex;
     flex-direction: column;
@@ -114,15 +136,20 @@
     width: 100%;
   }
 
+  .navMenu li span {
+    margin-left: 0.3rem;
+    display: flex;
+  }
+
   .navLinks {
     text-align: center;
-    padding: 2rem;
+    padding: 1.6rem;
     display: flex;
     justify-content: center;
   }
 
   .navLinks:hover {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     color: var(--primary);
     text-decoration: none;
     border-radius: 0;

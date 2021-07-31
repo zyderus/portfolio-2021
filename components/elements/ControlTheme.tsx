@@ -1,19 +1,26 @@
 import styles from '../../styles/ControlNavigation.module.css'
-import { useState, useEffect, SyntheticEvent } from 'react'
+import { useEffect, SyntheticEvent, useContext } from 'react'
+import { moon, sun } from '../../constants/icons_outline'
+import { ThemeContext } from '../Layout'
 
 const ControlTheme = () => {
-  let autoTheme = 'light'
-  const [themeName, setThemeName] = useState(autoTheme)
-  const [isUserTheme, setIsUserTheme] = useState(false)
+  const { autoTheme, themeName, setThemeName, isUserTheme, setIsUserTheme } = useContext(ThemeContext)
 
   const handleLight = () => {
     setThemeName('light')
     setIsUserTheme(true)
   }
+
   const handleDark = () => {
     setThemeName('dark')
     setIsUserTheme(true)
   }
+
+  const handleThemeToggle = () => {
+    setThemeName(themeName === 'light' ? 'dark' : 'light')
+    setIsUserTheme(true)
+  }
+
   const handleReset = (e: SyntheticEvent) => {
     e.preventDefault()
     setThemeName(autoTheme)
@@ -21,11 +28,11 @@ const ControlTheme = () => {
     setIsUserTheme(false)
   }
 
-  // const toggleTheme = () => setIsDark(!isDark)
   const setTheme = (theme: any) => {
     document.documentElement.className = theme
     localStorage.setItem('theme', theme)
   }
+
   const getTheme = () => {
     const theme: any = localStorage.getItem('theme')
     if (!theme || theme == 'null') {
@@ -36,6 +43,7 @@ const ControlTheme = () => {
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => getTheme(), [])
   useEffect(() => {
     console.log('useEefect')
@@ -45,30 +53,30 @@ const ControlTheme = () => {
   }, [themeName, isUserTheme])
 
   return (
-    <ul className={`${styles.list} ${styles.theme}`}>
-      <li className={styles.selection_item}>
-        <a onClick={handleReset}>
-          {themeName === 'dark' ? (
-            <i className={`fas fa-moon ${styles.icon_moon}`}></i>
-          ) : (
-            <i className='fas fa-sun'></i>
-          )}
-          {isUserTheme ? <i className={`fas fa-lock ${styles.icon_lock}`}></i> : null}
+    <>
+      <div className={styles.mobile_menu}>
+        <a href={void 0} onClick={handleThemeToggle}>
+          {themeName === 'dark' ? moon : sun}
         </a>
-      </li>
-      <ul className={styles.popup_list}>
-        <li className={styles.list_item}>
-          <a onClick={handleDark}>
-            <i className={`fas fa-moon ${styles.icon_moon}`}></i>
+      </div>
+
+      <ul className={`${styles.list} ${styles.theme}`}>
+        <li className={styles.selection_item}>
+          <a onClick={handleReset}>
+            {themeName === 'dark' ? moon : sun}
+            {isUserTheme ? <i className={`fas fa-lock ${styles.icon_lock}`}></i> : null}
           </a>
         </li>
-        <li className={styles.list_item}>
-          <a onClick={handleLight}>
-            <i className='fas fa-sun'></i>
-          </a>
-        </li>
+        <ul className={styles.popup_list}>
+          <li className={styles.list_item}>
+            <a onClick={handleDark}>{moon}</a>
+          </li>
+          <li className={styles.list_item}>
+            <a onClick={handleLight}>{sun}</a>
+          </li>
+        </ul>
       </ul>
-    </ul>
+    </>
   )
 }
 

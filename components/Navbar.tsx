@@ -5,6 +5,8 @@ import Button from './Button'
 import Control from './Control'
 import ControlTheme from './elements/ControlTheme'
 import ControlLocale from './elements/ControlLocale'
+// import { moon, sun, external_link, menu, x, arrows_expand, translate } from '../constants/icons_solid'
+import { moon, sun, external_link, menu, x, arrows_expand, translate } from '../constants/icons_outline'
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -51,15 +53,14 @@ const Navbar = () => {
           }}
           onClick={handleClick}
         >
-          <h1>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </h1>
+          {click ? x : menu}
         </div>
 
         <ul className={click ? styles.navMenu + ' ' + styles.active : styles.navMenu}>
           {click ? (
-            <li className={styles.navItem}>
+            <li className={styles.navControls}>
               <ControlTheme />
+              <div></div>
               <ControlLocale />
             </li>
           ) : null}
@@ -84,6 +85,24 @@ const Navbar = () => {
               </a>
             </Link>
           </li>
+          {click ? (
+            <>
+              <li className={styles.navItem}>
+                <Link href='https://github.com/zyderus'>
+                  <a target='_blank' className={styles.navLinks}>
+                    Github <span>{external_link}</span>
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link href='https://www.linkedin.com/in/rustamziyadov/'>
+                  <a target='_blank' className={styles.navLinks}>
+                    LinkedIn <span>{external_link}</span>
+                  </a>
+                </Link>
+              </li>
+            </>
+          ) : null}
           <li className={styles.navItem}>
             {button ? (
               <Link href='/contact'>

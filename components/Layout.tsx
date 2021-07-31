@@ -1,5 +1,5 @@
 import styles from '../styles/Layout.module.css'
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Control from './Control'
 import Footer from '../components/Footer'
@@ -14,32 +14,39 @@ export const LocaleContext: any = createContext({
   t: {},
 })
 
+export const ThemeContext: any = createContext({})
+
 type Props = { children: JSX.Element | JSX.Element[] | null }
 
 const Layout: React.FC<Props> = ({ children }) => {
   const { defaultLocale, locale, locales, pathname, asPath, push, t } = useLocaleRouter()
+  const [autoTheme, setAutoTheme] = useState('light')
+  const [themeName, setThemeName] = useState(autoTheme)
+  const [isUserTheme, setIsUserTheme] = useState(false)
 
   return (
-    <LocaleContext.Provider
-      value={{
-        defaultLocale,
-        locale,
-        locales,
-        pathname,
-        asPath,
-        push,
-        t,
-      }}
-    >
-      <div className={styles.wrapper}>
-        <Navbar />
-        <Control />
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
-    </LocaleContext.Provider>
+    <ThemeContext.Provider value={{ autoTheme, themeName, setThemeName, isUserTheme, setIsUserTheme }}>
+      <LocaleContext.Provider
+        value={{
+          defaultLocale,
+          locale,
+          locales,
+          pathname,
+          asPath,
+          push,
+          t,
+        }}
+      >
+        <div className={styles.wrapper}>
+          <Navbar />
+          <Control />
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </LocaleContext.Provider>
+    </ThemeContext.Provider>
   )
 }
 

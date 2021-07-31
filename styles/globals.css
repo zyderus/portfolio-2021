@@ -17,11 +17,10 @@
   --deeper-dark: #27292b;
 
   /* Scrollbar */
-  --scrollbar-background: #ececec;
+  --scrollbar-background: var(--bg-primary);
   --scrollbar-thumb: #bcbcbc;
-  --scrollbar-thumb-hover: #555;
-  --shadow-color: rgb(153, 152, 152);
-  --box-shadow: 0 10px 30px -10px black;
+  --scrollbar-thumb-hover: var(--secondary);
+  --box-shadow: 0 10px 30px -10px var(--primary);
 }
 
 :root.dark {
@@ -36,11 +35,11 @@
   --nav-color: rgba(66, 66, 66, 0.851);
 
   /* Scrollbar */
-  --scrollbar-background: var(--bg-secondary);
+  --scrollbar-background: var(--bg-primary);
   --scrollbar-thumb: #bcbcbc;
   --scrollbar-thumb-hover: var(--accent);
-  --shadow-color: rgb(153, 152, 152);
-  --box-shadow: 0 10px 30px -10px black;
+  --shadow-color: rgba(2, 12, 27, 0.7);
+  --box-shadow: 0 10px 30px -10px var(--primary);
 }
 
 ::-webkit-scrollbar {

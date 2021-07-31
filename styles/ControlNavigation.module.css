@@ -4,6 +4,21 @@
   position: relative;
 }
 
+.mobile_menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+}
+
 /* target locale switching menu */
 .locale {
   font-size: 1rem;
