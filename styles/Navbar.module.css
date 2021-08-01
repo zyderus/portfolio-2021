@@ -12,6 +12,16 @@
   z-index: 10;
 }
 
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
 @media screen and (max-width: 768px) {
   .navbar {
     height: calc(var(--nav-height) - 30px);

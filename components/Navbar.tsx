@@ -25,7 +25,6 @@ const Navbar = () => {
     if (window.innerWidth > 768) closeMobileMenu()
   })
   useEffect(() => {
-    console.log('click')
     if (click) {
       document.querySelector('body')!.style.overflow = 'hidden'
       // document.querySelector('body')!.style.marginRight = '10px'
