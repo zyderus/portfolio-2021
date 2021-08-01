@@ -7,6 +7,7 @@
 .mobile_menu {
   display: none;
   cursor: pointer;
+  z-index: 10000;
 }
 
 @media screen and (max-width: 768px) {
@@ -83,6 +84,35 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* --- Mobile Locale Selection Menu --- */
+.dropdown {
+  background-color: var(--bg-primary);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transform: translateX(-22%);
+}
+
+.dropdown a {
+  padding: 20px 38px;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.locale_overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+/* ------------------------------- */
 
 /* .list_item::before {
   content: ' ';

@@ -1,14 +1,14 @@
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Button from './Button'
-import Control from './Control'
 import ControlTheme from './elements/ControlTheme'
 import ControlLocale from './elements/ControlLocale'
-// import { moon, sun, external_link, menu, x, arrows_expand, translate } from '../constants/icons_solid'
-import { moon, sun, external_link, menu, x, arrows_expand, translate } from '../constants/icons_outline'
+import { external_link, menu, x } from '../constants/icons_outline'
 
 const Navbar = () => {
+  const navMenu: any = useRef()
+  const xclose: any = useRef()
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
 
@@ -28,11 +28,22 @@ const Navbar = () => {
     console.log('click')
     if (click) {
       document.querySelector('body')!.style.overflow = 'hidden'
-      document.querySelector('body')!.style.marginRight = '10px'
+      // document.querySelector('body')!.style.marginRight = '10px'
     } else {
       document.querySelector('body')!.style.overflow = 'unset'
-      document.querySelector('body')!.style.marginRight = 'unset'
+      // document.querySelector('body')!.style.marginRight = 'unset'
     }
+  }, [click])
+
+  useEffect(() => {
+    console.log('foo ku')
+
+    const isClickedOutside = (e: any) => {
+      if (click && navMenu.current && !navMenu.current.contains(e.target) && !xclose.current.contains(e.target))
+        setClick(false)
+    }
+    document.addEventListener('mousedown', isClickedOutside)
+    return () => document.removeEventListener('mousedown', isClickedOutside)
   }, [click])
 
   return (
@@ -47,23 +58,21 @@ const Navbar = () => {
         </div>
 
         <div
+          ref={xclose}
           className={styles.menuIcon}
-          style={{
-            marginRight: click ? '10px' : 'unset',
-          }}
+          // style={{ marginRight: click ? '10px' : 'unset' }}
           onClick={handleClick}
         >
           {click ? x : menu}
         </div>
 
-        <ul className={click ? styles.navMenu + ' ' + styles.active : styles.navMenu}>
-          {click ? (
+        <ul ref={navMenu} className={click ? styles.navMenu + ' ' + styles.active : styles.navMenu}>
+          {click && (
             <li className={styles.navControls}>
               <ControlTheme />
-              <div></div>
               <ControlLocale />
             </li>
-          ) : null}
+          )}
           <li>
             <Link href='/about'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
@@ -85,7 +94,7 @@ const Navbar = () => {
               </a>
             </Link>
           </li>
-          {click ? (
+          {click && (
             <>
               <li className={styles.navItem}>
                 <Link href='https://github.com/zyderus'>
@@ -102,7 +111,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </>
-          ) : null}
+          )}
           <li className={styles.navItem}>
             {button ? (
               <Link href='/contact'>
@@ -121,7 +130,7 @@ const Navbar = () => {
             )}
           </li>
         </ul>
-        {click ? <div className={styles.overlay}></div> : null}
+        {click && <div className={styles.overlay}></div>}
       </nav>
     </>
   )

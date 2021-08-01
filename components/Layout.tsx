@@ -20,12 +20,21 @@ type Props = { children: JSX.Element | JSX.Element[] | null }
 
 const Layout: React.FC<Props> = ({ children }) => {
   const { defaultLocale, locale, locales, pathname, asPath, push, t } = useLocaleRouter()
+  const [isUserSelected, setIsUserSelected] = useState(false)
   const [autoTheme, setAutoTheme] = useState('light')
   const [themeName, setThemeName] = useState(autoTheme)
   const [isUserTheme, setIsUserTheme] = useState(false)
 
   return (
-    <ThemeContext.Provider value={{ autoTheme, themeName, setThemeName, isUserTheme, setIsUserTheme }}>
+    <ThemeContext.Provider
+      value={{
+        autoTheme,
+        themeName,
+        setThemeName,
+        isUserTheme,
+        setIsUserTheme,
+      }}
+    >
       <LocaleContext.Provider
         value={{
           defaultLocale,
@@ -35,6 +44,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           asPath,
           push,
           t,
+          isUserSelected,
+          setIsUserSelected,
         }}
       >
         <div className={styles.wrapper}>
