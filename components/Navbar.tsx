@@ -1,12 +1,14 @@
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import Button from './Button'
 import ControlTheme from './elements/ControlTheme'
 import ControlLocale from './elements/ControlLocale'
 import { external_link, menu, x } from '../constants/icons_outline'
+import { LocaleContext } from './Layout'
 
 const Navbar = () => {
+  const { t } = useContext(LocaleContext)
   const navMenu: any = useRef()
   const xclose: any = useRef()
   const [click, setClick] = useState(false)
@@ -113,7 +115,7 @@ const Navbar = () => {
           )}
           <li className={styles.navItem}>
             {button ? (
-              <Link href='/contact'>
+              <Link href={t.resume}>
                 <a className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
                   <Button style={'outline'} size={'medium'}>
                     Resume
@@ -121,7 +123,7 @@ const Navbar = () => {
                 </a>
               </Link>
             ) : (
-              <Link href='/resume'>
+              <Link href={t.resume}>
                 <a className={styles.navLinksMobile} onClick={closeMobileMenu}>
                   Resume
                 </a>

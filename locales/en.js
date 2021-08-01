@@ -14,4 +14,6 @@ export default {
   aboutResume:
     'I am a Software Developer focusing in development, sometimes design, of functional and people-friendly applications. Mostly, I am about problem-solving, and still can appreciate a good joke.',
   btnMessageMe: 'Message Me',
+
+  resume: '/assets/resume/resume_en.pdf',
 }

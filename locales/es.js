@@ -14,4 +14,6 @@ export default {
   aboutResume:
     'Soy un desarrollador de software enfocado en el desarrollo de aplicaciones funcionales y amigables para las personas. Sobre todo, me dedico a la resolución de problemas y todavía puedo apreciar un buen chiste.',
   btnMessageMe: 'Mensajeame',
+
+  resume: '/assets/resume/resume_es.pdf',
 }
