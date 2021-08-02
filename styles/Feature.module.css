@@ -30,6 +30,20 @@
   z-index: 2;
 }
 
+.content svg {
+  width: 23px;
+}
+
+.content svg:hover {
+  color: var(--accent);
+}
+
+.content a:first-child svg {
+  transform: translateY(-2 px);
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
 .img_container {
   /* border: 1px solid red; */
   width: 60%;
