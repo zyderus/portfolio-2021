@@ -77,21 +77,21 @@ const Navbar = () => {
           <li>
             <Link href='/about'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                About
+                {t.about}
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/work'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                Experience
+                {t.experience}
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href='/contact'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
-                Contact
+                {t.contact}
               </a>
             </Link>
           </li>
@@ -115,17 +115,17 @@ const Navbar = () => {
           )}
           <li className={styles.navItem}>
             {button ? (
-              <Link href={t.resume}>
+              <Link href={t.resumeLink}>
                 <a className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
                   <Button style={'outline'} size={'medium'}>
-                    Resume
+                    {t.resume}
                   </Button>
                 </a>
               </Link>
             ) : (
-              <Link href={t.resume}>
+              <Link href={t.resumeLink}>
                 <a className={styles.navLinksMobile} onClick={closeMobileMenu}>
-                  Resume
+                  {t.resume}
                 </a>
               </Link>
             )}

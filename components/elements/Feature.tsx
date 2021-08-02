@@ -1,7 +1,7 @@
 import styles from '../../styles/Feature.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { svg_github, svg_demo } from '../../constants/svgs'
+import { svg_github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
 const Feature = ({ title, description, tech, img, src, src_github }: any) => {
@@ -16,7 +16,7 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
             <a>{svg_github}</a>
           </Link>
           <Link href={src}>
-            <a>{svg_demo}</a>
+            <a>{external_link}</a>
           </Link>
         </div>
         <Link href={src}>
