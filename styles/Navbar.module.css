@@ -55,6 +55,7 @@
   list-style: none;
   text-align: center;
   align-items: center;
+  /* justify-content: flex-start; */
   position: relative;
 }
 
@@ -118,16 +119,17 @@
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 50px 10px;
+    padding-top: 90px;
     width: min(75vw, 400px);
     background-color: var(--bg-primary);
     box-shadow: -10px 0px 30px -15px var(--shadow-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     right: -430px;
     transition: all 150ms;
     z-index: 9;
+    overflow-y: auto;
   }
 
   .navMenu.active {

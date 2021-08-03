@@ -2,7 +2,7 @@ import styles from '../../styles/Project.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button'
-import { svg_demo, svg_github } from '../../constants/svgs'
+import { svg_github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
 const randomDelay = (min: number, max: number) => ~~(Math.random() * (max - min + 1) + min)
@@ -12,7 +12,7 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
 
   return (
     <li
-      className={styles.list_item + ' ' + (isVisible ? styles.start + ' ' + styles.show : styles.start)}
+      className={styles.container + ' ' + (isVisible ? styles.start + ' ' + styles.show : styles.start)}
       ref={element}
       style={{ transitionDelay: `0.${randomDelay(100, 200)}s` }}
     >
@@ -42,19 +42,14 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
           </Link>
         </div>
         <div className={styles.project_btn_container}>
-          <Link href={src}>
-            <a>
-              <Button style='outline' size='small'>
-                More
-              </Button>
-            </a>
-          </Link>
-          <Link href={src_github}>
-            <a className={styles.svg_github}>{svg_github}</a>
-          </Link>
-          <Link href={src}>
-            <a className={styles.svg_demo}>{svg_demo}</a>
-          </Link>
+          <div className={styles.sources}>
+            <Link href={src_github}>
+              <a>{svg_github}</a>
+            </Link>
+            <Link href={src}>
+              <a>{external_link}</a>
+            </Link>
+          </div>
         </div>
       </div>
     </li>

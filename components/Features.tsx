@@ -25,10 +25,10 @@ const Features = () => {
   const { t } = useContext(LocaleContext)
 
   return (
-    <section id='features'>
+    <section id='experience'>
       <div className={styles.container}>
         <div className={`heading ${styles.heading}`}>
-          <h1>{t.experienceTitle}</h1>
+          <h1>{t.experienceHeading}</h1>
         </div>
         <ul className={styles.list}>{projects}</ul>
       </div>

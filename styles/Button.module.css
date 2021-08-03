@@ -46,5 +46,6 @@
   .btn {
     width: 100%;
     padding: 8px 0;
+    font-size: calc(12px + 2vw);
   }
 }

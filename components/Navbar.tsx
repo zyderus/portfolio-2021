@@ -75,21 +75,21 @@ const Navbar = () => {
             </li>
           )}
           <li>
-            <Link href='/about'>
+            <Link href='#about'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
                 {t.about}
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href='/work'>
+            <Link href='#experience'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
                 {t.experience}
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href='/contact'>
+            <Link href='#contact'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
                 {t.contact}
               </a>

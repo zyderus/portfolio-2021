@@ -3,31 +3,35 @@
 }
 
 .intro {
+  font-family: 'Roboto', sans-serif;
   color: var(--accent);
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
-.title_name {
+.title_name,
+.title_slogan {
   color: var(--primary);
   font-size: 4.2rem;
-  line-height: 1.15;
-  letter-spacing: -0.15rem;
+  line-height: 1.1;
+  letter-spacing: -0.1rem;
 }
 
 .title_slogan {
   color: var(--secondary);
-  margin: 0;
   font-size: 3.8rem;
-  line-height: 1.15;
-  letter-spacing: -0.15rem;
+}
+
+.text {
+  margin: 1rem 0 2rem;
 }
 
 @media screen and (max-width: 768px) {
   .title_name {
-    font-size: min(2.2rem + 4vw);
+    font-size: min(2rem + 4vw);
   }
 
   .title_slogan {
-    font-size: min(2rem + 4vw);
+    font-size: min(1.8rem + 4vw);
   }
 }

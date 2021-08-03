@@ -8,7 +8,7 @@ const About = () => {
   const { t } = useContext(LocaleContext)
 
   return (
-    <section>
+    <section id='about'>
       <div className={styles.container}>
         <div className='heading'>
           <h1>{t.aboutMe}</h1>

@@ -26,5 +26,7 @@ export default {
 
   aboutMeTools: 'My Tools:',
 
-  experienceTitle: 'Some of my work',
+  experienceHeading: 'Some of my work',
+
+  projectsHeading: "Other Things I've made",
 }

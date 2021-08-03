@@ -7,25 +7,27 @@ const Contact = () => {
   const [clicked, setClicked] = useState(false)
 
   return (
-    <div className={styles.contact}>
-      <h1>.contact().me()</h1>
-      <br />
-      <br />
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
-        veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
-      </p>
-      <br />
-      <br />
-      <Button style='outline' size='large' click={() => setClicked(!clicked)}>
-        click
-      </Button>
+    <section id='contact'>
+      <div className={styles.contact}>
+        <h1>.contact().me()</h1>
+        <br />
+        <br />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
+          veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
+        </p>
+        <br />
+        <br />
+        <Button style='outline' size='large' click={() => setClicked(!clicked)}>
+          click
+        </Button>
 
-      <br />
-      <br />
+        <br />
+        <br />
 
-      {clicked ? <ContactForm /> : null}
-    </div>
+        {clicked ? <ContactForm /> : null}
+      </div>
+    </section>
   )
 }
 

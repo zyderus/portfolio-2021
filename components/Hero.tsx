@@ -7,15 +7,12 @@ const Hero = () => {
   const { t } = useContext(LocaleContext)
 
   return (
-    <section>
+    <section className='hero'>
       <div className={styles.hero}>
         <p className={styles.intro}>{`${t.greet}, ${t.intro}`}</p>
-        <br />
         <h1 className={styles.title_name}>{`${t.firstName} ${t.lastName},`}</h1>
         <h1 className={styles.title_slogan}>{`${t.slogan}.`}</h1>
-        <br />
-        <p>{t.aboutSummary}</p>
-        <br />
+        <p className={styles.text}>{t.aboutSummary}</p>
         <Button style='outline' size='large'>
           {t.btnMessageMe}
         </Button>
