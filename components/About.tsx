@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <section>
-      <div className={styles.about}>
+      <div className={styles.container}>
         <div className='heading'>
           <h1>{t.aboutMe}</h1>
         </div>
@@ -32,9 +32,9 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div className={styles.img_container}>
+          {/* <div className={styles.img_container}>
             <Image className={styles.image} src={'/assets/images/ku.jpg'} alt='ku' width={1000} height={1300} />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

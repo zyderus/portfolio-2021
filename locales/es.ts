@@ -25,4 +25,6 @@ export default {
     'Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono.',
 
   aboutMeTools: 'Mis herramientas:',
+
+  experienceTitle: 'Algunas de mis obras',
 }

@@ -1,51 +1,19 @@
-.heading {
-  /* border: 1px solid green; */
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 3rem;
-}
-.heading::before {
-  content: '';
-}
-.heading::after {
-  content: none;
-}
-
-.list_item > div {
-  margin: 0 0 7rem;
-  /* font-size: 1.2rem; */
-  line-height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-/* external child module Feature.module.css */
-.list_item:nth-child(odd) div {
+.list_item:nth-child(even) > div {
   flex-direction: row-reverse;
   text-align: end;
 }
 
-.list_item:nth-child(odd) > div > div:first-child {
-  margin-left: -12%;
-}
-
-.list_item:nth-child(even) > div > div:last-child {
-  margin-left: -12%;
-}
-
-.list_item:nth-child(odd) > div div ul {
-  justify-content: flex-end;
-}
-.list_item:nth-child(odd) > div div ul:last-child {
+.list_item:nth-child(even) > div > div:first-child {
   margin-right: 0;
+  margin-left: -100px;
 }
 
-/* .title */
-/* .list_item:nth-child(odd) > div div a h2:hover {
-  transform: translateX(2px);
+@media screen and (max-width: 768px) {
+  .list_item:nth-child(even) > div {
+    flex-direction: column-reverse;
+  }
+
+  .list_item:nth-child(even) > div > div:first-child {
+    margin-left: 0;
+  }
 }
-.list_item:nth-child(even) > div div a h2:hover {
-  transform: translateX(-2px);
-} */

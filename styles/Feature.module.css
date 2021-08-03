@@ -1,4 +1,10 @@
-.start {
+.container {
+  display: flex;
+  margin: 0 0 6rem;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5rem;
+
   transform: translateY(40%);
   opacity: 0;
   transition: all 0.5s ease-in;
@@ -25,9 +31,10 @@
 }
 
 .content {
-  /* border: 1px solid green; */
-  width: 52%;
+  height: 100%;
+  margin-right: -100px;
   z-index: 2;
+  /* margin-right: max(-10%, -5rem); */
 }
 
 .content svg {
@@ -39,26 +46,23 @@
 }
 
 .content a:first-child svg {
-  transform: translateY(-2 px);
+  transform: translateY(-2px);
   width: 20px;
   margin-right: 0.5rem;
 }
 
 .img_container {
-  /* border: 1px solid red; */
-  width: 60%;
-  min-width: 350px;
+  min-width: max(60%, 350px);
   filter: grayscale(60%);
   transition: var(--transition);
-  display: block;
 }
 .img_container:hover {
   filter: none;
 }
 
-/* .img_container a div {
+.img_container div {
   display: block !important;
-} */
+}
 
 .img {
   object-fit: cover;
@@ -67,9 +71,10 @@
 
 .title {
   color: var(--accent);
-  margin: 0.6rem 0 1.6rem;
-  display: inline-block;
+  margin: 1rem 0 1.6rem;
+  font-family: 'Roboto', serif;
   font-weight: bold;
+
   opacity: 0;
   transform: translateY(15px);
   transform-origin: top;
@@ -83,33 +88,47 @@
   background-color: var(--deep-dark);
   border-radius: 4px;
   letter-spacing: 0.03rem;
-  color: var(--bg-primary);
+  color: #ddd;
   box-shadow: 0 10px 30px -10px #555;
-  padding: 1rem 1.5rem;
+  padding: min(5%, 1rem) min(5%, 1.5rem);
+
   opacity: 0;
   transform: translateY(20px);
 }
 
 .tech_list {
-  margin: 1.6rem 0 0.6rem;
-  display: flex;
-  justify-content: flex-start;
+  margin: 0.8rem auto 0;
 }
 
 .tech_li {
   line-height: 1.3rem;
-  margin: 0 0.1rem;
-  padding: 0 0.3rem;
-  font-family: courier;
+  padding: 0 0.5rem;
+  display: inline-block;
+  font-family: courier, sans-serif;
   font-size: 0.95rem;
-  color: var(--bg-primary);
+  color: #ddd;
   background-color: #000;
+  margin: 0.1rem;
 }
 
-.tech_li:last-child {
-  margin-right: 0;
-}
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .img_container {
+    min-width: 0;
+    width: 100%;
+  }
+  .content {
+    width: 90%;
+    padding: min(5%, 1rem);
+    margin: 0;
+    margin-top: max(-150px, -30%);
+    border-radius: 4px;
+    background-color: var(--bg-primary-transparent);
+  }
 
-.tech_li:first-child {
-  margin-left: 0;
+  .tech_list {
+    text-align: center;
+  }
 }

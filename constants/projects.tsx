@@ -29,10 +29,10 @@ export const projects = [
     id: 3,
     title: 'Coffee App',
     date: '2021-03-01',
-    tech: ['Typescript', 'React', 'Firebase', 'StyledComponents'],
+    tech: ['Typescript', 'React', 'Firebase', 'Styled Components'],
     description:
       'Lorem ipsum, dtur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fugiat ratione voluptatum officia quod sed?',
-    img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    img: 'https://images.unsplash.com/photo-1600354896999-b4646f010829?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1036&q=80',
     src: '#project-demo',
     src_github: '#project-github',
     feature: true,

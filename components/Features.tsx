@@ -2,6 +2,8 @@ import styles from '../styles/Features.module.css'
 import Feature from './elements/Feature'
 import { projects as features } from '../constants/projects'
 import { shapeFeatures } from '../utilities/sort'
+import { useContext } from 'react'
+import { LocaleContext } from './Layout'
 
 const projects = shapeFeatures(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
   return (
@@ -20,11 +22,13 @@ const projects = shapeFeatures(features).map(({ id, title, date, description, te
 })
 
 const Features = () => {
+  const { t } = useContext(LocaleContext)
+
   return (
     <section id='features'>
-      <div className={styles.features}>
+      <div className={styles.container}>
         <div className={`heading ${styles.heading}`}>
-          <h1>Things I&apos;ve Built</h1>
+          <h1>{t.experienceTitle}</h1>
         </div>
         <ul className={styles.list}>{projects}</ul>
       </div>
