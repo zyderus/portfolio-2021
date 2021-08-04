@@ -18,7 +18,7 @@ export default {
     'Soy un desarrollador de software enfocado en el desarrollo de aplicaciones funcionales y amigables para las personas. Sobre todo, me dedico a la resolución de problemas y todavía puedo apreciar un buen chiste.',
   btnMessageMe: 'Mensajeame',
 
-  aboutMe: '.sobre().mí()',
+  aboutMe: 'Sobre mí',
   aboutMeTextP1:
     'Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono. Hola! Soy Rustam y me gusta hacer cosas que viven en Internet ... o en tu teléfono.',
   aboutMeTextP2:
@@ -29,4 +29,12 @@ export default {
   experienceHeading: 'Algunas de mis obras',
 
   projectsHeading: 'Otras cosas que he hecho',
+
+  contactHeading: 'Contáctame',
+  btnClick: 'Clic',
+
+  formName: 'Nombre',
+  formEmail: 'Email',
+  formMessage: 'Mensaje',
+  btnSend: 'Enviar',
 }

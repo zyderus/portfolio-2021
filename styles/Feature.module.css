@@ -1,9 +1,8 @@
 .container {
   display: flex;
-  margin: 0 0 6rem;
+  margin: 5rem 0;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.5rem;
 
   transform: translateY(40%);
   opacity: 0;
@@ -13,7 +12,7 @@
 .show {
   transform: translateY(0);
   opacity: 1;
-  transition: all 0.3s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .show_01 {
@@ -52,7 +51,7 @@
 }
 
 .img_container {
-  min-width: max(60%, 350px);
+  min-width: max(55%, 350px);
   filter: grayscale(60%);
   transition: var(--transition);
 }
@@ -105,7 +104,7 @@
   padding: 0 0.5rem;
   display: inline-block;
   font-family: courier, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #ddd;
   background-color: #000;
   margin: 0 0.1rem;

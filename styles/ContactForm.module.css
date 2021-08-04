@@ -1,0 +1,74 @@
+.container {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  color: var(--primary);
+  text-rendering: optimizeLegibility;
+  margin-inline: auto;
+}
+
+.xclose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  stroke: var(--primary);
+}
+
+.xclose:hover {
+  stroke: var(--secondary);
+}
+
+.formGroup {
+  padding: 3rem;
+  position: relative;
+  margin-block: 0 3rem;
+  transition: transform 0.5s ease-in;
+}
+
+.formGroup {
+  box-shadow: var(--box-shadow);
+  padding: 25px;
+}
+
+.inputGroup {
+  text-align: left;
+}
+
+.formGroup input[type='text'],
+.formGroup input[type='email'],
+.formGroup textarea {
+  background: #f9f9f9;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.formGroup input[type='text'],
+.formGroup input[type='email'],
+.formGroup textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #ddd;
+  font-size: 0.9rem;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+.formGroup input[type='text']:hover,
+.formGroup input[type='email']:hover,
+.formGroup textarea:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+.formGroup textarea {
+  height: 200px;
+  max-width: 100%;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}

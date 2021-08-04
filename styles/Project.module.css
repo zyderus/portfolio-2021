@@ -19,26 +19,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform-origin: bottom left;
   filter: grayscale(60%);
-  transition: all 0.2s ease-in;
+  transition: transform 0.1s linear;
 }
 
 .container:hover {
-  transform: rotate(1deg);
+  transform: translateY(-4px);
   filter: none;
 }
 
 .content {
   padding: min(5%, 1rem);
+  color: #eee;
 }
 
 .content p {
   padding-bottom: 0;
-}
-
-.title {
-  margin-bottom: 1rem;
 }
 
 .title a {
@@ -82,7 +78,7 @@
   padding: 0 0.5rem;
   display: inline-block;
   font-family: courier, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #ddd;
   background-color: #000;
   margin: 0.1rem;
@@ -103,7 +99,7 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
   .container {
     width: 100%;
     border-radius: 0;

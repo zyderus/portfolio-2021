@@ -8,7 +8,7 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
   const [element, isVisible] = useObserver({})
 
   return (
-    <div className={isVisible ? styles.container + ' ' + styles.show : styles.start} ref={element}>
+    <div className={isVisible ? styles.container + ' ' + styles.show : styles.container} ref={element}>
       <div className={styles.content}>
         <div></div>
         <div className='sources'>

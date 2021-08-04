@@ -18,7 +18,7 @@ export default {
     'I am a Software Developer focusing in development, sometimes design, of functional and people-friendly applications. Mostly, I am about problem-solving, and still can appreciate a good joke.',
   btnMessageMe: 'Message Me',
 
-  aboutMe: '.about().me()',
+  aboutMe: 'About Me',
   aboutMeTextP1:
     'Hello! My name is Rustam and I enjoy making stuff that live on the web and run on mobiles. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque debitis inventore hic doloremque libero beatae!',
   aboutMeTextP2:
@@ -29,4 +29,12 @@ export default {
   experienceHeading: 'Some of my work',
 
   projectsHeading: "Other Things I've made",
+
+  contactHeading: 'Contact Me',
+  btnClick: 'Click',
+
+  formName: 'Name',
+  formEmail: 'Email',
+  formMessage: 'Message',
+  btnSend: 'Send',
 }

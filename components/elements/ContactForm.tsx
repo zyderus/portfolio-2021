@@ -1,8 +1,12 @@
 import styles from '../../styles/ContactForm.module.css'
-import { SyntheticEvent, useState } from 'react'
+import { SyntheticEvent, useState, useRef } from 'react'
 import Button from '../Button'
+import { useContext } from 'react'
+import { LocaleContext } from '../Layout'
+import { x } from '../../constants/icons_outline'
 
-const ContactForm = () => {
+const ContactForm = ({ close }: any) => {
+  const { t } = useContext(LocaleContext)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -30,41 +34,43 @@ const ContactForm = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.inputGroup}>
-        <label htmlFor='name'>Name</label>
-        <input
-          type='text'
-          name='name'
-          className={styles.inputField}
-          onChange={e => setName(e.target.value)}
-          value={name}
-        />
+      <div className={styles.formGroup + ' ' + styles.active}>
+        <div className={styles.xclose} onClick={close}>
+          {x}
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor='name'>{t.formName}</label>
+          <input
+            type='text'
+            name='name'
+            className={styles.inputField}
+            onChange={e => setName(e.target.value)}
+            value={name}
+          />
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor='email'>{t.formEmail}</label>
+          <input
+            type='email'
+            name='email'
+            className={styles.inputField}
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor='message'>{t.formMessage}</label>
+          <textarea
+            name='message'
+            className={styles.inputField}
+            onChange={e => setMessage(e.target.value)}
+            value={message}
+          />
+        </div>
       </div>
-      <div className={styles.inputGroup}>
-        <label htmlFor='email'>Email</label>
-        <input
-          type='email'
-          name='email'
-          className={styles.inputField}
-          onChange={e => setEmail(e.target.value)}
-          value={email}
-        />
-      </div>
-      <div className={styles.inputGroup}>
-        <label htmlFor='message'>Message</label>
-        <input
-          type='text'
-          name='message'
-          className={styles.inputField}
-          onChange={e => setMessage(e.target.value)}
-          value={message}
-        />
-      </div>
-
-      <br />
 
       <Button style='outline' size='large' click={handleSubmit}>
-        Send
+        {t.btnSend}
       </Button>
     </div>
   )

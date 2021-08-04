@@ -13,6 +13,7 @@ const Navbar = () => {
   const xclose: any = useRef()
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
@@ -22,6 +23,15 @@ const Navbar = () => {
     window.addEventListener('resize', showButton)
   }
 
+  const handleScroll = () => {
+    if (window.scrollY >= 100) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
+    }
+  }
+
+  useEffect(() => window.addEventListener('scroll', handleScroll), [])
   useEffect(() => showButton(), [])
   useEffect(() => {
     if (window.innerWidth > 768) closeMobileMenu()
@@ -37,8 +47,6 @@ const Navbar = () => {
   }, [click])
 
   useEffect(() => {
-    console.log('foo ku')
-
     const isClickedOutside = (e: any) => {
       if (click && navMenu.current && !navMenu.current.contains(e.target) && !xclose.current.contains(e.target))
         setClick(false)
@@ -49,7 +57,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar + ' ' + (isScrolled && styles.scrolled)}>
         <div className={styles.logoContainer}>
           <Link href='/'>
             <a onClick={closeMobileMenu}>
@@ -60,7 +68,7 @@ const Navbar = () => {
 
         <div
           ref={xclose}
-          className={styles.menuIcon}
+          className={styles.menuIcon + ' ' + (isScrolled && styles.scrolled)}
           // style={{ marginRight: click ? '10px' : 'unset' }}
           onClick={handleClick}
         >

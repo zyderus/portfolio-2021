@@ -3,6 +3,10 @@
   text-align: end;
 }
 
+.list_item:last-child > div {
+  margin-bottom: 0;
+}
+
 .list_item:nth-child(even) > div > div:first-child {
   margin-right: 0;
   margin-left: -100px;
