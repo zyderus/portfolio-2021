@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import { useContext, useState, useRef } from 'react'
 import styles from '../styles/Contact.module.css'
-import Button from './Button'
+import Button from './elements/Button'
 import ContactForm from './elements/ContactForm'
-import { useContext } from 'react'
 import { LocaleContext } from './Layout'
 
 const Contact = () => {
@@ -11,11 +10,12 @@ const Contact = () => {
 
   return (
     <section id='contact'>
-      <div className={styles.contact}>
-        <h1>{t.contactHeading}</h1>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <h1>{t.contactHeading}</h1>
+        </div>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius hic veniam doloribus libero ex voluptate in
-          veritatis natus! Consequuntur voluptatum provident explicabo reprehenderit quos, consectetur?
+          {t.contactText} <span className={styles.funny}>😄</span>
         </p>
         <div className={styles.contact_form}>
           {clicked && (

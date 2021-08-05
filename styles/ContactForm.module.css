@@ -31,44 +31,37 @@
 .formGroup {
   box-shadow: var(--box-shadow);
   padding: 25px;
+  border-radius: 4px;
 }
 
-.inputGroup {
-  text-align: left;
-}
-
-.formGroup input[type='text'],
-.formGroup input[type='email'],
-.formGroup textarea {
-  background: #f9f9f9;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
-}
-
-.formGroup input[type='text'],
-.formGroup input[type='email'],
+.formGroup input,
 .formGroup textarea {
   width: 100%;
-  border: 1px solid #ccc;
-  background: #ddd;
+  color: inherit;
+  border: 1px solid var(--bg-secondary);
+  background: var(--bg-main);
   font-size: 0.9rem;
   margin: 0 0 5px;
   padding: 10px;
 }
 
-.formGroup input[type='text']:hover,
-.formGroup input[type='email']:hover,
+.formGroup input:hover,
 .formGroup textarea:hover {
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
+  border: 1px solid var(--secondary);
 }
 
 .formGroup textarea {
-  height: 200px;
   max-width: 100%;
+  resize: none;
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: 0;
-  border: 1px solid #aaa;
+  border: 1px solid var(--secondary);
+}
+
+.form {
+  margin-top: 2rem;
 }

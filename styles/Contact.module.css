@@ -1,9 +1,37 @@
-.contact {
+.container {
   margin: 0 auto;
   text-align: center;
   max-width: 640px;
 }
 
-.contact p {
-  margin-bottom: 1rem;
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: min(4rem, 5%);
+  white-space: nowrap;
+}
+
+.heading::before,
+.heading::after {
+  content: '';
+  width: 130px;
+  position: relative;
+  border-bottom: 1px solid var(--secondary);
+  bottom: 0;
+}
+
+.heading::before {
+  margin-right: 0.8rem;
+}
+
+.heading::after {
+  margin-left: 0.8rem;
+}
+
+.container p {
+  margin-bottom: 2rem;
+}
+
+.funny {
+  font-size: 1.4rem;
 }

@@ -1,35 +1,55 @@
 import styles from '../../styles/ContactForm.module.css'
-import { SyntheticEvent, useState, useRef } from 'react'
-import Button from '../Button'
-import { useContext } from 'react'
+import { useState, useContext } from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import { LocaleContext } from '../Layout'
+import { Inputs } from '../../interfaces/contact'
+import Status from '../elements/Status'
+import Button from './Button'
 import { x } from '../../constants/icons_outline'
 
 const ContactForm = ({ close }: any) => {
   const { t } = useContext(LocaleContext)
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [submit, setSubmit] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<Inputs>()
+  const [submitDisabled, setSubmitDisabled] = useState(false)
+  const [formStatus, setFormStatus] = useState('')
+  const [senderName, setSenderName] = useState('')
 
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault()
-    const data = { name, email, message }
-
-    fetch('/api/contact', {
+  const onSubmit: SubmitHandler<Inputs> = async data => {
+    setSenderName(data.name)
+    setSubmitDisabled(true)
+    setFormStatus('loading')
+    const options = {
       method: 'post',
-      headers: { 'Content-type': 'application/json' },
+      header: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-    }).then(res => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmit(true)
-        setName('')
-        setEmail('')
-        setMessage('')
+    }
+
+    try {
+      const res = await fetch('/api/contact', options)
+      if (res.status == 200) {
+        reset()
+        setFormStatus('success')
+        setTimeout(() => close(), 7000)
+      } else {
+        setFormStatus('error')
+        setTimeout(() => {
+          setFormStatus('')
+          setSubmitDisabled(false)
+        }, 3000)
       }
-    })
+      console.log(res.status)
+    } catch (err) {
+      setFormStatus('error')
+      setTimeout(() => {
+        setFormStatus('')
+        setSubmitDisabled(false)
+      }, 5000)
+    }
   }
 
   return (
@@ -38,38 +58,85 @@ const ContactForm = ({ close }: any) => {
         <div className={styles.xclose} onClick={close}>
           {x}
         </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor='name'>{t.formName}</label>
-          <input
-            type='text'
-            name='name'
-            className={styles.inputField}
-            onChange={e => setName(e.target.value)}
-            value={name}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor='email'>{t.formEmail}</label>
-          <input
-            type='email'
-            name='email'
-            className={styles.inputField}
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor='message'>{t.formMessage}</label>
-          <textarea
-            name='message'
-            className={styles.inputField}
-            onChange={e => setMessage(e.target.value)}
-            value={message}
-          />
-        </div>
+        {formStatus && <Status status={formStatus} name={senderName} />}
+        <form id='contact-form' className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div>
+            <label htmlFor='name' className='sr-only'>
+              {t.formName}
+            </label>
+            <input
+              type='text'
+              {...register('name', {
+                required: {
+                  value: true,
+                  message: t.formNameRequired,
+                },
+                minLength: {
+                  value: 2,
+                  message: t.formNameValid,
+                },
+              })}
+              placeholder={t.formName}
+            />
+            <span className='error'>{errors?.name?.message}</span>
+          </div>
+          <div>
+            <label htmlFor='email' className='sr-only'>
+              {t.formEmail}
+            </label>
+            <input
+              type='text'
+              {...register('email', {
+                required: {
+                  value: true,
+                  message: t.formEmailRequired,
+                },
+                minLength: {
+                  value: 7,
+                  message: t.formEmailShort,
+                },
+                maxLength: {
+                  value: 120,
+                  message: t.formEmailLong,
+                },
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: t.formEmailValid,
+                },
+              })}
+              placeholder={t.formYourEmail}
+            />
+            <span className='error'>{errors?.email?.message}</span>
+          </div>
+
+          <div>
+            <label htmlFor='message' className='sr-only'>
+              {t.formMessage}
+            </label>
+            <textarea
+              {...register('message', {
+                required: {
+                  value: true,
+                  message: t.formMessageRequired,
+                },
+                maxLength: {
+                  value: 1000,
+                  message: t.formMessageMaxLength,
+                },
+                minLength: {
+                  value: 10,
+                  message: t.formMessageMinLength,
+                },
+              })}
+              placeholder={t.formMessage}
+              rows={4}
+            ></textarea>
+            <span className='error'>{errors?.message?.message}</span>
+          </div>
+        </form>
       </div>
 
-      <Button style='outline' size='large' click={handleSubmit}>
+      <Button style='outline' size='large' click={handleSubmit(onSubmit)} disabled={submitDisabled}>
         {t.btnSend}
       </Button>
     </div>

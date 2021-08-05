@@ -1,31 +1,40 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 const transporter = nodemailer.createTransport({
-  port: 465,
   host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    user: 'taersk@gmail.com',
+    user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASSWORD,
   },
-  secure: true,
 })
 
-const sendEmail = (req: NextApiRequest, res: NextApiResponse) => {
+const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
+  const { name, email, message } = JSON.parse(req.body)
+
   const mailData = {
-    from: 'taersk@gmail.com',
-    to: 'zyderus@gmail.com',
-    subject: `Message From ${req.body.name}`,
-    text: req.body.message + ' | Sent from: ' + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`,
+    from: email,
+    to: process.env.MY_EMAIL,
+    subject: `${name} sent message from rystam.com`,
+    html: `
+      <p>Contact form submission @ rystam.com</p>
+      <p><strong>Name: </strong> ${name} </p>
+      <p><strong>Email: </strong> ${email} </p>
+      <p><strong>Message: </strong> ${message} </p>
+
+    `,
   }
 
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err)
-    else console.log(info)
-  })
-
-  res.status(200)
+  try {
+    const emailRes = await transporter.sendMail(mailData)
+    console.log('Message Sent', emailRes.response)
+    res.status(200).json(req.body)
+  } catch (err) {
+    console.log(err)
+    res.status(455).json(err)
+  }
 }
 
 export default sendEmail

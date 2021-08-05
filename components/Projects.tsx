@@ -1,6 +1,6 @@
 import styles from '../styles/Projects.module.css'
 import Link from 'next/link'
-import Button from './Button'
+import Button from './elements/Button'
 import Project from './elements/Project'
 import { projects as list } from '../constants/projects'
 import { shapeProjects } from '../utilities/sort'

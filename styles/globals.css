@@ -189,3 +189,7 @@ p {
 .icons {
   color: var(--primary);
 }
+
+.error {
+  color: #ff3c00;
+}

@@ -2,7 +2,7 @@ import styles from '../styles/About.module.css'
 import Image from 'next/image'
 import { useContext } from 'react'
 import { LocaleContext } from './Layout'
-import Button from './Button'
+import Button from './elements/Button'
 
 const About = () => {
   const { t } = useContext(LocaleContext)
@@ -13,12 +13,10 @@ const About = () => {
         <div className='heading'>
           <h1>{t.aboutMe}</h1>
         </div>
-        <br />
         <div className={styles.content}>
           <div className={styles.info}>
             <p>{t.aboutMeTextP1}</p>
             <p>{t.aboutMeTextP2}</p>
-            <p>{t.aboutMeTools}</p>
             <div className={styles.list_container}>
               <ul className={styles.list}>
                 <li className={styles.li}>JavaScript</li>

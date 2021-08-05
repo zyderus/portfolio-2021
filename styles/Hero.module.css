@@ -2,6 +2,10 @@
   margin-inline: auto;
 }
 
+.waving_hand {
+  font-size: 2rem;
+}
+
 .intro {
   font-family: 'Roboto', sans-serif;
   color: var(--accent);

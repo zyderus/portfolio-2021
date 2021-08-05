@@ -1,7 +1,7 @@
 import styles from '../../styles/Project.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import Button from '../Button'
+import Button from './Button'
 import { svg_github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 

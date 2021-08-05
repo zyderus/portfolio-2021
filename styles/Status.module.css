@@ -1,0 +1,29 @@
+.status {
+  background-color: var(--bg-primary-transparent);
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  top: 2.5rem;
+  border-radius: 4px;
+}
+
+.result {
+  border-radius: 4px;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.result p {
+  color: var(--primary);
+  margin: 0;
+}
+
+.result svg {
+  width: 70px;
+  fill: var(--accent);
+}
+
+.emoji {
+  font-size: 1.5rem;
+  margin-right: 0.2rem;
+}
