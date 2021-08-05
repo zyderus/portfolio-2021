@@ -124,7 +124,7 @@ const Navbar = () => {
           <li className={styles.navItem}>
             {button ? (
               <Link href={t.resumeLink}>
-                <a className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
+                <a target='_blank' className={`${styles.navLinks} ${styles.resumeButton}`} onClick={closeMobileMenu}>
                   <Button style={'outline'} size={'medium'}>
                     {t.resume}
                   </Button>
@@ -132,7 +132,7 @@ const Navbar = () => {
               </Link>
             ) : (
               <Link href={t.resumeLink}>
-                <a className={styles.navLinksMobile} onClick={closeMobileMenu}>
+                <a target='_blank' className={styles.navLinksMobile} onClick={closeMobileMenu}>
                   {t.resume}
                 </a>
               </Link>
