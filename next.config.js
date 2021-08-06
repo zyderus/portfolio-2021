@@ -5,6 +5,6 @@ module.exports = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com', 'github.com'],
   },
 }

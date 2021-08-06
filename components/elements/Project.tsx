@@ -47,7 +47,7 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
               <a>{svg_github}</a>
             </Link>
             <Link href={src}>
-              <a>{external_link}</a>
+              <a target='_blank'>{external_link}</a>
             </Link>
           </div>
         </div>
