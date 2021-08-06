@@ -1,5 +1,6 @@
 .hero {
   margin-inline: auto;
+  max-width: 900px;
 }
 
 .waving_hand {
@@ -28,6 +29,8 @@
 
 .text {
   margin: 1rem 0 2rem;
+  max-width: 800px;
+  padding-right: 20%;
 }
 
 @media screen and (max-width: 768px) {

@@ -45,7 +45,7 @@ export default {
   formEmailLong: 'Слишком длинный email',
   formEmailValid: 'Не действительный email',
 
-  formMessageRequired: 'Пожалуйста, введи сообщение',
+  formMessageRequired: 'Напиши что-нибудь',
   formMessageMaxLength: 'Сообщение должно быть до 1000 символов',
   formMessageMinLength: 'Должно быть длиннее 10 символов!',
 

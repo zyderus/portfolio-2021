@@ -45,7 +45,7 @@ export default {
   formEmailLong: 'Email is too long',
   formEmailValid: 'Not a valid email address',
 
-  formMessageRequired: 'Please enter your message',
+  formMessageRequired: 'Enter your message',
   formMessageMaxLength: 'Your message should be less than 1000 characters',
   formMessageMinLength: 'Should be longer than 10 characters!',
 

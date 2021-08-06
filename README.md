@@ -15,11 +15,12 @@
   <img src="/public/assets/images/screenshot.png" width="100%">
 </div>
 
-
 ## Description
+
 A software developer web portfolio
 
 ## Tech
+
 Next js, Typescript
 
 ## Getting Started
@@ -42,7 +43,7 @@ Next js, Typescript
 
    ```sh
    npm run build
-   ```  
+   ```
 
 ## Contributors
 
