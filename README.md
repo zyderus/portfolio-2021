@@ -12,7 +12,7 @@
 </p>
 
 <div align="center">
-  <img src="/public/assets/images/portfolio.png" width="100%">
+  <img src="/public/assets/images/Portfolio.png" width="100%">
 </div>
 
 ## Description
