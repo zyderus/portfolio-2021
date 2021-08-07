@@ -1,17 +1,28 @@
 import nodemailer from 'nodemailer'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     type: 'OAuth2',
+//     user: process.env.GMAIL_USER,
+//     clientId: process.env.GMAIL_CLIENTID,
+//     clientSecret: process.env.GMAIL_CLIENT_SECRET,
+//     refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+//     accessToken: process.env.GMAIL_ACCESS_TOKEN,
+//   },
+// })
+
+let transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    type: 'OAuth2',
-    user: process.env.GMAIL_USER,
-    clientId: process.env.GMAIL_CLIENTID,
-    clientSecret: process.env.GMAIL_CLIENT_SECRET,
-    refreshToken: process.env.GMAIL_REFRESH_TOKEN,
-    accessToken: process.env.GMAIL_ACCESS_TOKEN,
-  },
-})
+      type: 'OAuth2',
+      user: process.env.GMAIL_USER,
+      accessToken: process.env.GMAIL_ACCESS_TOKEN
+  }
+});
 
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = JSON.parse(req.body)
