@@ -34,7 +34,7 @@ const ContactForm = ({ close }: any) => {
       if (res.status == 200) {
         reset()
         setFormStatus('success')
-        setTimeout(() => close(), 7000)
+        setTimeout(() => close(), 10000)
       } else {
         setFormStatus('error')
         setTimeout(() => {
@@ -42,7 +42,7 @@ const ContactForm = ({ close }: any) => {
           setSubmitDisabled(false)
         }, 3000)
       }
-      console.log(res.status)
+      console.log(res)
     } catch (err) {
       setFormStatus('error')
       setTimeout(() => {

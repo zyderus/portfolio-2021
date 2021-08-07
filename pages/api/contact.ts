@@ -33,11 +33,11 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const emailRes = await transporter.sendMail(mailData)
     console.log('Message Sent', emailRes.response)
-    transporter.close()
+    // transporter.close()
     res.status(200).json(req.body)
   } catch (err) {
     console.log(err)
-    transporter.close()
+    // transporter.close()
     res.status(455).json(err)
   }
 }
