@@ -18,7 +18,7 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = JSON.parse(req.body)
 
   const mailData = {
-    from: `Portfolio rings 🚀 <${email}>`,
+    from: `Rystam.Mailer 🚀 <${email}>`,
     to: process.env.MY_EMAIL,
     subject: `${name} sent message from rystam.com`,
     text: `Contact form submission @ rystam.com from: ${name}, email: ${email}, message: ${message}`,
@@ -33,8 +33,10 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     const result = await transporter.sendMail(mailData)
+    console.log('RESULT response', result.response)
     res.status(200).json(result.response)
   } catch (err) {
+    console.log('err:', err)
     res.status(455).json(err)
   }
 }

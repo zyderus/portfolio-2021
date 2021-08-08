@@ -30,7 +30,7 @@ const ContactForm = ({ close }: any) => {
     }
 
     try {
-      const res = await fetch('/api/contact', options)
+      const res = await fetch('/api/contact', options)      
       if (res.status == 200) {
         reset()
         setFormStatus('success')
@@ -42,19 +42,12 @@ const ContactForm = ({ close }: any) => {
           setSubmitDisabled(false)
         }, 3000)
       }
-
-      
-      console.log('RESO:', res)
-      const report = await res.json()
-      console.log('REPORTA:', report)
-      
     } catch (err) {
       setFormStatus('error')
       setTimeout(() => {
         setFormStatus('')
         setSubmitDisabled(false)
       }, 5000)
-
       console.log('ERROR FROM CATCH:', err)
     }
   }
