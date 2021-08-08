@@ -2,6 +2,7 @@
   height: var(--nav-height);
   width: 100%;
   padding: 0 3.2rem;
+  font-size: 0.9rem;
   background-color: var(--bg-primary-transparent);
   position: fixed;
   top: 0;
@@ -142,6 +143,7 @@
     bottom: 0;
     right: 0;
     padding-top: 90px;
+    font-size: 1.1rem;
     width: min(75vw, 400px);
     background-color: var(--bg-primary);
     box-shadow: -10px 0px 30px -15px var(--shadow-color);
@@ -172,7 +174,7 @@
 
   .navLinks {
     text-align: center;
-    padding: 1.1rem;
+    padding: 1.3rem;
     display: flex;
     justify-content: center;
   }
@@ -191,7 +193,7 @@
     padding: 14px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent);
     background-color: transparent;
     border: 1px solid var(--accent);
