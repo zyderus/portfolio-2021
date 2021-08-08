@@ -1,3 +1,6 @@
+/* Github images path */
+// img: 'https://github.com/zyderus/portfolio/blob/main/public/assets/images/tron.webp?raw=true',
+
 export const projects = [
   {
     id: 1,
@@ -6,7 +9,7 @@ export const projects = [
     tech: ['Node', 'Express', 'MongoDB', 'Bootstrap'],
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fugiat ratione voluptatum officia quod sed?',
-    img: 'https://github.com/zyderus/portfolio/blob/main/public/assets/images/tron.webp?raw=true',
+    img: '/assets/images/tron.webp',
     src: 'https://watch-movies-app.herokuapp.com/',
     src_github: 'https://github.com/zyderus/movie-app',
     feature: true,
@@ -45,7 +48,7 @@ export const projects = [
     tech: ['Typescript'],
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolore expedita laudantium est provident tempore, odio cum fuit amet consectetsed?',
-    img: 'https://github.com/zyderus/portfolio/blob/main/public/assets/images/mugbook.webp?raw=true',
+    img: '/assets/images/mugbook.webp',
     src: 'https://typescript-spa-auth-basic.herokuapp.com/',
     src_github: 'https://github.com/zyderus/typescript-spa-auth-basic',
     feature: false,

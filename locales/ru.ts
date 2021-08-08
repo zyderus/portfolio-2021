@@ -2,7 +2,7 @@
 export default {
   about: 'О себе',
   experience: 'Опыт',
-  contact: 'Связяться',
+  contact: 'Связаться',
   resume: 'Резюме',
   resumeLink: '/assets/resume/resume_ru.pdf',
 
@@ -51,7 +51,8 @@ export default {
 
   sendThanks1: 'Спасибо',
   sendThanks2: 'что связался со мной!',
-  sendWishes: 'Ты крут! Доброго дня!',
+  sendThanks2female: 'что связалась со мной!',
+  sendWishes: 'Доброго дня!',
   sendError: 'Что-то пошло не так.',
   sendAgain: 'Попробуй еще раз немного позже!',
 

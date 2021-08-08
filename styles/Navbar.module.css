@@ -103,9 +103,8 @@
 }
 
 .navLinks:hover {
-  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: var(--primary);
+  text-decoration-color: var(--accent);
   transition: all 0.15s ease-out;
 }
 
@@ -160,17 +159,20 @@
   }
 
   .navMenu li {
+    /* border: 1px solid blue; */
     width: 100%;
   }
 
   .navMenu li span {
+    /* border: 1px solid red; */
     margin-left: 0.3rem;
     display: flex;
+    width: 15px;
   }
 
   .navLinks {
     text-align: center;
-    padding: 1.6rem;
+    padding: 1.1rem;
     display: flex;
     justify-content: center;
   }

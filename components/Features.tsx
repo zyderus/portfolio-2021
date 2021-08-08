@@ -9,8 +9,8 @@ const projects = shapeFeatures(features).map(({ id, title, date, description, te
   return (
     <li className={styles.list_item} key={id}>
       <Feature
-        title={`${title} ${new Date(date).getFullYear()}`}
-        date={date}
+        title={title}
+        date={new Date(date).getFullYear()}
         description={description}
         tech={tech}
         img={img}

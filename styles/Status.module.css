@@ -8,14 +8,15 @@
 }
 
 .result {
-  border-radius: 4px;
   color: var(--accent);
   font-size: 1rem;
+  padding-top: 2rem;
+  padding-inline: min(0.5rem, 5%);
 }
 
-.result p {
+.result div {
   color: var(--primary);
-  margin: 0;
+  margin-block: 1rem;
 }
 
 .result svg {

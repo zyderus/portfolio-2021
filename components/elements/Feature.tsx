@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { svg_github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
-const Feature = ({ title, description, tech, img, src, src_github }: any) => {
+const Feature = ({ title, date, description, tech, img, src, src_github }: any) => {
   const [element, isVisible] = useObserver({})
 
   return (
-    <div className={isVisible ? styles.container + ' ' + styles.show : styles.container} ref={element}>
+    <div ref={element} className={isVisible ? styles.container + ' ' + styles.show : styles.container}>
       <div className={styles.content}>
         <div></div>
         <div className='sources'>
@@ -24,6 +24,7 @@ const Feature = ({ title, description, tech, img, src, src_github }: any) => {
             <h2 className={isVisible ? styles.title + ' ' + styles.show_01 : styles.title}>{title}</h2>
           </a>
         </Link>
+        <div className={styles.date}>{date}</div>
         <p className={isVisible ? styles.description + ' ' + styles.show_05 : styles.description}>{description}</p>
         <ul className={styles.tech_list}>
           {tech.map((tech: string | null, idx: number | null) => {

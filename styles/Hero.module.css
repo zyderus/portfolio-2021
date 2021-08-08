@@ -1,6 +1,11 @@
 .hero {
   margin-inline: auto;
   max-width: 900px;
+  transform: translateX(3%);
+}
+
+.hero p:first-child {
+  padding-block: 0 2rem;
 }
 
 .waving_hand {
@@ -10,8 +15,8 @@
 .intro {
   font-family: 'Roboto', sans-serif;
   color: var(--accent);
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .title_name,
@@ -28,17 +33,26 @@
 }
 
 .text {
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1rem;
   max-width: 800px;
   padding-right: 20%;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    transform: translateX(0);
+  }
+  
   .title_name {
     font-size: min(2rem + 4vw);
   }
 
   .title_slogan {
-    font-size: min(1.8rem + 4vw);
+    font-size: min(1.8rem + 3vw);
+  }
+
+  .text {
+    padding-right: 0;
   }
 }

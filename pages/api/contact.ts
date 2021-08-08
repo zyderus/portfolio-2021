@@ -1,18 +1,6 @@
 import nodemailer from 'nodemailer'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     type: 'OAuth2',
-//     user: process.env.GMAIL_USER,
-//     clientId: process.env.GMAIL_CLIENTID,
-//     clientSecret: process.env.GMAIL_CLIENT_SECRET,
-//     refreshToken: process.env.GMAIL_REFRESH_TOKEN,
-//     accessToken: process.env.GMAIL_ACCESS_TOKEN,
-//   },
-// })
-
 let transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
@@ -20,7 +8,11 @@ let transporter = nodemailer.createTransport({
   auth: {
       type: 'OAuth2',
       user: process.env.GMAIL_USER,
-      accessToken: process.env.GMAIL_ACCESS_TOKEN
+      clientId: process.env.GMAIL_ID,
+      clientSecret: process.env.GMAIL_SECRET,
+      refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+      accessToken: process.env.GMAIL_ACCESS_TOKEN,
+      // expires: 3599
   }
 });
 
@@ -28,10 +20,10 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = JSON.parse(req.body)
 
   const mailData = {
-    from: email,
+    from: 'email',
     to: process.env.MY_EMAIL,
     subject: `${name} sent message from rystam.com`,
-    text: `Contact form submission @ rystam.com from: ${name}, email: ${email}, message: ${message}`,
+    // text: `Contact form submission @ rystam.com from: ${name}, email: ${email}, message: ${message}`,
     html: `
       <p>Contact form submission @ rystam.com</p>
       <p><strong>Name: </strong> ${name} </p>
@@ -47,10 +39,12 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
     // transporter.close()
     res.status(200).json(req.body)
   } catch (err) {
-    console.log(err)
+    console.log('ERRor::', err)
     // transporter.close()
     res.status(455).json(err)
   }
+
+  // res.status(200).json(req.body)
 }
 
 export default sendEmail

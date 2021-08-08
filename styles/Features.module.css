@@ -1,3 +1,32 @@
+.heading {
+  display: flex;
+  margin-bottom: min(4rem, 5%);
+  white-space: nowrap;
+}
+
+.heading::after {
+  content: '';
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid var(--secondary);
+  bottom: 0;
+}
+
+.heading::after {
+  margin-left: 0.8rem;
+}
+
+@media screen and (max-width: 650px) {
+  .heading {
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+
+  .heading::after {
+    content: none;
+  }
+}
+
 .list_item:nth-child(even) > div {
   flex-direction: row-reverse;
   text-align: end;

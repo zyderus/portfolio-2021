@@ -4,7 +4,8 @@ import { useState, useContext } from 'react'
 import { LocaleContext } from '../Layout'
 
 const Status = ({ status, name }: any) => {
-  name = name.charAt(0).toUpperCase() + name.slice(1)
+  name = name && name.charAt(0).toUpperCase() + name.slice(1)
+  const nameLastChar = name && name[name.length - 1]
   const { t } = useContext(LocaleContext)
   let show
   switch (status) {
@@ -14,24 +15,22 @@ const Status = ({ status, name }: any) => {
     case 'success':
       show = (
         <>
-          <p>
+          <div>
             <span className={styles.emoji}>✔️</span>
-            {t.sendThanks1} {name} {t.sendThanks2}
-          </p>
-          <p>
+            {t.sendThanks1} {name} {(nameLastChar === 'а' || nameLastChar === 'я') ? t['sendThanks2' + 'female'] : t.sendThanks2}
+          </div>
+          <div>
             <span className={styles.emoji}>🖖</span>
             {t.sendWishes}
-          </p>
+          </div>
         </>
       )
       break
     case 'error':
       show = (
         <>
-          <p>
-            <span className={styles.emoji}>❌</span> {t.sendError}
-          </p>
-          <p>{t.sendAgain}</p>
+          <div><span className={styles.emoji}>❌</span> {t.sendError}</div>
+          <div>{t.sendAgain}</div>
         </>
       )
       break

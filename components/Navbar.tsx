@@ -69,6 +69,7 @@ const Navbar = () => {
         <div
           ref={xclose}
           className={styles.menuIcon + ' ' + (isScrolled && styles.scrolled)}
+          /* Compensate for scrollbar expire */
           // style={{ marginRight: click ? '10px' : 'unset' }}
           onClick={handleClick}
         >
