@@ -1,19 +1,19 @@
 import nodemailer from 'nodemailer'
 import { NextApiRequest, NextApiResponse } from 'next'
 
+
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
   secure: true,
   auth: {
-      type: 'OAuth2',
-      user: process.env.GOOGLE_USER,
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
-      refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
-      accessToken: process.env.GOOGLE_ACCESS_TOKEN,
+    type: 'OAuth2',
+    user: process.env.GOOGLE_USER,
+    clientId: process.env.GOOGLE_ID,
+    clientSecret: process.env.GOOGLE_SECRET,
+    refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
   }
-});
+})
 
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = JSON.parse(req.body)
@@ -49,3 +49,17 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
 }
 
 export default sendEmail
+
+
+// const transporter = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: 465,
+//   secure: true,
+//   auth: {
+//       type: 'OAuth2',
+//       user: process.env.GOOGLE_USER,
+//       clientId: process.env.GOOGLE_ID,
+//       clientSecret: process.env.GOOGLE_SECRET,
+//       refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+//   }
+// })
