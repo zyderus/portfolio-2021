@@ -1,10 +1,10 @@
 <div align="center">
   <h2>Portfolio</h2>
-  <strong>Version 0.1.0</strong>
+  <strong>Version 1.0</strong>
 </div>
 
 <p align="center">
-  🚀 View @ https://next-tuts-g6xp1s7fp-zyderus.vercel.app | hosted with <a href="https://vercel.com/">vercel</a>
+  🚀 View @ www.rystam.com
 </p>
 
 <p align="center">
