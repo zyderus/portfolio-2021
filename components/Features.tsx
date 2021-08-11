@@ -5,24 +5,24 @@ import { shapeFeatures } from '../utilities/sort'
 import { useContext } from 'react'
 import { LocaleContext } from './Layout'
 
-const projects = shapeFeatures(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
-  return (
-    <li className={styles.list_item} key={id}>
-      <Feature
-        title={title}
-        date={new Date(date).getFullYear()}
-        description={description}
-        tech={tech}
-        img={img}
-        src={src}
-        src_github={src_github}
-      />
-    </li>
-  )
-})
-
 const Features = () => {
-  const { t } = useContext(LocaleContext)
+  const { t, locale } = useContext(LocaleContext)
+
+  const projects = shapeFeatures(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+    return (
+      <li className={styles.list_item} key={id}>
+        <Feature
+          title={title}
+          date={new Date(date).getFullYear()}
+          description={description[locale]}
+          tech={tech}
+          img={img}
+          src={src}
+          src_github={src_github}
+        />
+      </li>
+    )
+  })
 
   return (
     <section id='experience'>

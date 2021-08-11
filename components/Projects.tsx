@@ -4,44 +4,38 @@ import Button from './elements/Button'
 import Project from './elements/Project'
 import { projects as list } from '../constants/projects'
 import { shapeProjects } from '../utilities/sort'
-import { useState, useEffect, SyntheticEvent } from 'react'
-import { useContext } from 'react'
+import { useState, useEffect, SyntheticEvent, useContext, useRef } from 'react'
 import { LocaleContext } from './Layout'
 
-const projectList = shapeProjects(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => (
-  <Project
-    key={id}
-    title={`${title} ${new Date(date).getFullYear()}`}
-    date={date}
-    description={description}
-    tech={tech}
-    img={img}
-    src={src}
-    src_github={src_github}
-  />
-))
-
 const Projects = () => {
+  const { t, locale } = useContext(LocaleContext)
   const [projects, setProjects] = useState<Array<any> | []>([])
   const [viewBtn, setViewBtn] = useState<boolean>(true)
-  const [page, setPage] = useState<number>(0)
-  const { t } = useContext(LocaleContext)
+  const [edgeProject, setEdgeProject] = useState<number>(3)
+  const projectList = useRef<any>([])
+
+  projectList.current = shapeProjects(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => (
+    <Project
+      key={id}
+      title={`${title} ${new Date(date).getFullYear()}`}
+      date={date}
+      description={description[locale]}
+      tech={tech}
+      img={img}
+      src={src}
+      src_github={src_github}
+    />
+  ))
 
   const handlePage = (e: SyntheticEvent) => {
     e.preventDefault()
-    setPage(page => page + 1)
+    setEdgeProject(edgeProject + 6)
   }
 
   useEffect(() => {
-    if (page < 1) {
-      setProjects(projectList.slice(0, 3))
-    } else {
-      const start = page * 6 - 3
-      const end = page * 6 + 3
-      setProjects((projects: any) => [...projects, ...projectList.slice(start, end)])
-      if (!projectList[end]) setViewBtn(false)
-    }
-  }, [page])
+    setProjects(projectList.current.slice(0, edgeProject))
+    if (!projectList.current[edgeProject]) setViewBtn(false)
+  }, [edgeProject, locale])
 
   return (
     <section id='projects'>

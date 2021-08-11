@@ -52,6 +52,11 @@
   display: flex;
 }
 
+.img {
+  object-fit: cover;
+  object-position: top;
+}
+
 .project_btn_container {
   background-color: var(--bg-secondary);
   border-bottom-left-radius: 4px;

@@ -18,9 +18,7 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
     >
       <div className={styles.content}>
         <h1 className={styles.title}>
-          <Link href={src}>
-            <a>{title}</a>
-          </Link>
+          <a href={src ? src : void 0}>{title}</a>
         </h1>
         <p>{description}</p>
         <ul className={styles.tech_list}>
@@ -35,20 +33,18 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
       </div>
       <div>
         <div className={styles.img_container}>
-          <Link href={src}>
-            <a>
-              <Image className={styles.img} src={img} alt='ku' width={550} height={300} />
-            </a>
-          </Link>
+          <a href={src ? src : void 0}>
+            <Image className={styles.img} src={img} alt='ku' width={550} height={300} layout='intrinsic' />
+          </a>
         </div>
         <div className={styles.project_btn_container}>
           <div className={styles.sources}>
-            <Link href={src_github}>
-              <a>{svg_github}</a>
-            </Link>
-            <Link href={src}>
-              <a target='_blank'>{external_link}</a>
-            </Link>
+            {src_github && <a href={src_github}>{svg_github}</a>}
+            {src && (
+              <a href={src} target='_blank' rel='noreferrer'>
+                {external_link}
+              </a>
+            )}
           </div>
         </div>
       </div>
