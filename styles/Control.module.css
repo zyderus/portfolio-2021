@@ -20,6 +20,7 @@
   align-items: center;
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 
 .container::after {
@@ -32,24 +33,45 @@
 }
 
 .list_item {
+  height: 3rem;
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
   transition: transform 0.15s;
 }
 
 .list_item:hover {
+  transform: translateY(-5px);
+}
+
+.list_item > a {
+  fill: var(--primary);
+  color: var(--primary);
+}
+
+.list_item > a:hover {
   color: var(--accent);
-  transform: translateY(-15%);
+}
+
+.list_item > a:hover svg {
+  fill: var(--accent);
 }
 
 .list_item a {
-  display: inline-block;
-  padding: 0.2rem 1rem;
-  text-align: center;
-  color: inherit;
-  position: relative;
-  transition: all 0.15s ease-in;
+  height: 100%;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 0.15s ease-in; */
+}
+
+.list_item a:active {
+  transform: scale(0.95);
+}
+
+.list_item a svg {
+  width: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {

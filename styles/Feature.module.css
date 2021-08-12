@@ -36,15 +36,33 @@
   height: 100%;
   margin-right: -100px;
   z-index: 2;
-  /* margin-right: max(-10%, -5rem); */
 }
 
-.content svg {
-  width: 23px;
+.sources a svg {
+  color: var(--primary);
+  display: inline-block !important;
+}
+
+.sources a:first-child:active svg,
+.sources a:active svg {
+  transform: scale(0.92);
+}
+
+.sources a:first-child svg {
+  fill: var(--primary);
+  width: 21px !important;
+}
+
+.content a svg {
+  width: 25px;
 }
 
 .content svg:hover {
   color: var(--accent);
+}
+
+.sources a:first-child svg:hover {
+  fill: var(--accent);
 }
 
 .content a:first-child svg {

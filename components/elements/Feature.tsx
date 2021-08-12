@@ -1,11 +1,10 @@
 import styles from '../../styles/Feature.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
-import { svg_github, external_link } from '../../constants/icons_outline'
+import { github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
 const Feature = ({ title, date, description, tech, img, src, src_github }: any) => {
-  const [element, isVisible] = useObserver({})
+  const [element, isVisible] = useObserver({ rootMargin: '0px 0px -20% 0px' })
   const isLink = () => {
     if (!src) void 0
   }
@@ -14,10 +13,10 @@ const Feature = ({ title, date, description, tech, img, src, src_github }: any) 
     <div ref={element} className={isVisible ? styles.container + ' ' + styles.show : styles.container}>
       <div className={styles.content}>
         <div></div>
-        <div className='sources'>
+        <div className={styles.sources}>
           {src_github && (
             <a href={src_github} target='_blank' rel='noreferrer'>
-              {svg_github}
+              {github}
             </a>
           )}
           {src && (

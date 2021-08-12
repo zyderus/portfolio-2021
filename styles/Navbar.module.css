@@ -41,7 +41,7 @@
   }
 
   .navbar.scrolled::before,
-  .navbar.scrolled h1 {
+  .navbar.scrolled .logoContainer {
     transform: translateY(-70px);
   }
 }
@@ -58,7 +58,10 @@
 
 .logoContainer h1 {
   color: var(--accent);
-  transition: all 0.2s ease-in;
+}
+
+.logoContainer h1:active {
+  transform: scale(0.95);
 }
 
 .menuIcon {
@@ -194,11 +197,15 @@
     background-color: transparent;
     border: 1px solid var(--accent);
     border-radius: 4px;
-    transition: all 0.3s ease-out;
+    transition: background-color 0.15s ease-out;
   }
 
   .navLinksMobile:hover {
-    background: var(--bg-primary);
-    transition: 250ms;
+    background-color: var(--bg-secondary);
+    transition: background-color 0.15s ease-out;
+  }
+
+  .navLinksMobile:active {
+    transform: scale(0.95);
   }
 }
