@@ -12,7 +12,7 @@ export default {
   greetEvening: 'Buenas noches',
   intro: 'me nombre es',
   firstName: 'Rustam',
-  lastName: 'Ziyadov',
+  lastName: 'Ziyadov,',
   slogan: 'y construyo cosas con código',
   aboutSummary:
     'Soy un ingeniero de software con sede en Moscú, Rusia. Me especializo en el desarrollo de aplicaciones funcionales y amigables con el ser humano.',

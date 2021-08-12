@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import styles from '../styles/Contact.module.css'
 import Button from './elements/Button'
 import ContactForm from './elements/ContactForm'

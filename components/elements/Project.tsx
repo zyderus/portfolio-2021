@@ -1,13 +1,11 @@
 import styles from '../../styles/Project.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
-import Button from './Button'
 import { svg_github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
 const randomDelay = (min: number, max: number) => ~~(Math.random() * (max - min + 1) + min)
 
-const Project = ({ id, title, description, tech, img, src, src_github }: any) => {
+const Project = ({ title, description, tech, img, src, src_github }: any) => {
   const [element, isVisible] = useObserver({ rootMargin: '0px 0px 0px -50px' })
 
   return (
@@ -18,7 +16,9 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
     >
       <div className={styles.content}>
         <h1 className={styles.title}>
-          <a href={src ? src : void 0}>{title}</a>
+          <a href={src ? src : void 0} target='_blank' rel='noreferrer'>
+            {title}
+          </a>
         </h1>
         <p>{description}</p>
         <ul className={styles.tech_list}>
@@ -33,13 +33,17 @@ const Project = ({ id, title, description, tech, img, src, src_github }: any) =>
       </div>
       <div>
         <div className={styles.img_container}>
-          <a href={src ? src : void 0}>
+          <a href={src ? src : void 0} target='_blank' rel='noreferrer'>
             <Image className={styles.img} src={img} alt='ku' width={550} height={300} layout='intrinsic' />
           </a>
         </div>
         <div className={styles.project_btn_container}>
           <div className={styles.sources}>
-            {src_github && <a href={src_github}>{svg_github}</a>}
+            {src_github && (
+              <a href={src_github} target='_blank' rel='noreferrer'>
+                {svg_github}
+              </a>
+            )}
             {src && (
               <a href={src} target='_blank' rel='noreferrer'>
                 {external_link}

@@ -1,6 +1,6 @@
 import styles from '../../styles/Status.module.css'
 import { loader } from '../../constants/icons_outline'
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { LocaleContext } from '../Layout'
 
 const Status = ({ status, name }: any) => {
@@ -17,7 +17,8 @@ const Status = ({ status, name }: any) => {
         <>
           <div>
             <span className={styles.emoji}>✔️</span>
-            {t.sendThanks1} {name} {(nameLastChar === 'а' || nameLastChar === 'я') ? t['sendThanks2' + 'female'] : t.sendThanks2}
+            {t.sendThanks1} {name}{' '}
+            {nameLastChar === 'а' || nameLastChar === 'я' ? t['sendThanks2' + 'female'] : t.sendThanks2}
           </div>
           <div>
             <span className={styles.emoji}>🖖</span>
@@ -29,7 +30,9 @@ const Status = ({ status, name }: any) => {
     case 'error':
       show = (
         <>
-          <div><span className={styles.emoji}>❌</span> {t.sendError}</div>
+          <div>
+            <span className={styles.emoji}>❌</span> {t.sendError}
+          </div>
           <div>{t.sendAgain}</div>
         </>
       )

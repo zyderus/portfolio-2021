@@ -1,5 +1,4 @@
 import styles from '../../styles/Button.module.css'
-import Link from 'next/link'
 
 const STYLES = ['solid', 'outline']
 const SIZES = ['small', 'medium', 'large']
@@ -7,10 +6,11 @@ const SIZES = ['small', 'medium', 'large']
 const Button: React.FC<any> = ({ style, size, click, children, disabled }) => {
   const checkStyle = STYLES.includes(style) ? styles[style] : STYLES[0]
   const checkSize = SIZES.includes(size) ? styles[size] : SIZES[0]
+  const classes = [styles.btn, checkStyle, checkSize].join(' ')
 
   return (
     <>
-      <button className={[styles.btn, checkStyle, checkSize].join(' ')} onClick={click} disabled={disabled}>
+      <button className={classes} onClick={click} disabled={disabled}>
         {children}
       </button>
     </>

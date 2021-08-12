@@ -38,8 +38,8 @@
   --scrollbar-background: var(--bg-primary);
   --scrollbar-thumb: #bcbcbc;
   --scrollbar-thumb-hover: var(--accent);
+  --box-shadow: 0 10px 30px -10px black;
   --shadow-color: rgba(2, 12, 27, 0.7);
-  --box-shadow: 0 10px 30px -10px var(--primary);
 }
 
 ::-webkit-scrollbar {
@@ -74,7 +74,7 @@
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   color: var(--primary);
   background-color: var(--bg-primary);
   font-size: 1.1rem;
@@ -90,7 +90,6 @@ section {
   margin-inline: auto;
   padding-inline: min(6rem, 8%);
   padding-block: 70px 10rem;
-  /* padding-block: min(5rem, 5rem+3vw); */
 }
 
 section.hero {

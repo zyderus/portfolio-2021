@@ -27,7 +27,7 @@ const Projects = () => {
     />
   ))
 
-  const handlePage = (e: SyntheticEvent) => {
+  const handleEdgeProject = (e: SyntheticEvent) => {
     e.preventDefault()
     setEdgeProject(edgeProject + 6)
   }
@@ -47,13 +47,19 @@ const Projects = () => {
         <ul className={styles.list}>{projects}</ul>
 
         <div className={styles.btn_container}>
-          <Link href='#'>
-            <a>
-              <Button style='outline' size='large' click={viewBtn ? handlePage : () => console.log('ku')}>
-                {viewBtn ? 'View More' : 'View Archive'}
-              </Button>
-            </a>
-          </Link>
+          {viewBtn ? (
+            <Button style='outline' size='large' click={handleEdgeProject}>
+              View More
+            </Button>
+          ) : (
+            <Link href='/archive'>
+              <a>
+                <Button style='outline' size='large'>
+                  View Archive
+                </Button>
+              </a>
+            </Link>
+          )}
         </div>
       </div>
     </section>

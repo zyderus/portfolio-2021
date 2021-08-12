@@ -15,14 +15,18 @@ const Feature = ({ title, date, description, tech, img, src, src_github }: any) 
       <div className={styles.content}>
         <div></div>
         <div className='sources'>
-          {src_github && <a href={src_github}>{svg_github}</a>}
+          {src_github && (
+            <a href={src_github} target='_blank' rel='noreferrer'>
+              {svg_github}
+            </a>
+          )}
           {src && (
             <a href={src} target='_blank' rel='noreferrer'>
               {external_link}
             </a>
           )}
         </div>
-        <a href={src ? src : void 0}>
+        <a href={src ? src : void 0} target='_blank' rel='noreferrer'>
           <h2 className={isVisible ? styles.title + ' ' + styles.show_01 : styles.title}>{title}</h2>
         </a>
         <div className={styles.date}>{date}</div>
@@ -38,7 +42,7 @@ const Feature = ({ title, date, description, tech, img, src, src_github }: any) 
         </ul>
       </div>
       <div className={styles.img_container}>
-        <a href={src ? src : void 0}>
+        <a href={src ? src : void 0} target='_blank' rel='noreferrer'>
           <Image className={styles.img} src={img} width={600} height={360} layout='intrinsic' alt={title} />
         </a>
       </div>

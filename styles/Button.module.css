@@ -1,19 +1,15 @@
 .btn {
   padding: 8px 20px;
   border-radius: 4px;
-  outline: none;
-  border: none;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   text-decoration: none;
-  transition: all 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
 }
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  display: none;
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .solid {

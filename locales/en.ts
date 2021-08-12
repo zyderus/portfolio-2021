@@ -12,7 +12,7 @@ export default {
   greetEvening: 'Good evening',
   intro: 'my name is',
   firstName: 'Rustam',
-  lastName: 'Ziyadov',
+  lastName: 'Ziyadov,',
   slogan: 'and I build things with code',
   aboutSummary:
     'I am a software engineer based in Moscow, Russia. I specialize in the development of functional and human-friendly applications.',

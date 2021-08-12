@@ -1,5 +1,5 @@
 import styles from '../../styles/ContactForm.module.css'
-import { useState, useContext } from 'react'
+import { useState, useContext, useRef } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { LocaleContext } from '../Layout'
 import { Inputs } from '../../interfaces/contact'
@@ -18,6 +18,7 @@ const ContactForm = ({ close }: any) => {
   const [submitDisabled, setSubmitDisabled] = useState(false)
   const [formStatus, setFormStatus] = useState('')
   const [senderName, setSenderName] = useState('')
+  const timeId = useRef<any>(null)
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
     setSenderName(data.name)
@@ -30,21 +31,24 @@ const ContactForm = ({ close }: any) => {
     }
 
     try {
-      const res = await fetch('/api/contact', options)      
+      const res = await fetch('/api/contact', options)
       if (res.status == 200) {
         reset()
         setFormStatus('success')
-        setTimeout(() => close(), 9000)
+        timeId.current = setTimeout(() => {
+          console.log(timeId)
+          close()
+        }, 9000)
       } else {
         setFormStatus('error')
-        setTimeout(() => {
+        timeId.current = setTimeout(() => {
           setFormStatus('')
           setSubmitDisabled(false)
-        }, 3000)
+        }, 5000)
       }
     } catch (err) {
       setFormStatus('error')
-      setTimeout(() => {
+      timeId.current = setTimeout(() => {
         setFormStatus('')
         setSubmitDisabled(false)
       }, 5000)
@@ -52,10 +56,15 @@ const ContactForm = ({ close }: any) => {
     }
   }
 
+  const handleClose = () => {
+    clearTimeout(timeId.current)
+    close()
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.formGroup + ' ' + styles.active}>
-        <div className={styles.xclose} onClick={close}>
+        <div className={styles.xclose} onClick={handleClose}>
           {x}
         </div>
         {formStatus && <Status status={formStatus} name={senderName} />}

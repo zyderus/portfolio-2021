@@ -13,7 +13,7 @@ const Hero = () => {
         <p className={styles.intro}>
           <span className={styles.waving_hand}>👋</span> {`${t.greet}, ${t.intro}`}
         </p>
-        <h1 className={styles.title_name}>{`${t.firstName} ${t.lastName},`}</h1>
+        <h1 className={styles.title_name}>{`${t.firstName} ${t.lastName}`}</h1>
         <h1 className={styles.title_slogan}>{`${t.slogan}.`}</h1>
         <p className={styles.text}>{t.aboutSummary}</p>
         <Link href='#contact'>

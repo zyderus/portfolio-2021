@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     clientId: process.env.GOOGLE_ID,
     clientSecret: process.env.GOOGLE_SECRET,
     refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
-  }
+  },
 })
 
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
