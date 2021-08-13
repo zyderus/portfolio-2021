@@ -74,7 +74,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   color: var(--primary);
   background-color: var(--bg-primary);
   font-size: 1.1rem;
