@@ -31,6 +31,12 @@ const Navbar = () => {
     }
   }
 
+  const handleScrollToTop = () => {
+    console.log('ku')
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }
+
   useEffect(() => window.addEventListener('scroll', handleScroll), [])
   useEffect(() => showButton(), [])
   useEffect(() => {
@@ -59,8 +65,8 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar + ' ' + (isScrolled && styles.scrolled)}>
         <div className={styles.logoContainer}>
-          <Link href='/#'>
-            <a onClick={closeMobileMenu}>
+          <Link href='/'>
+            <a onClick={handleScrollToTop}>
               <h1>RZ</h1>
             </a>
           </Link>
@@ -101,6 +107,13 @@ const Navbar = () => {
             <Link href='/#contact'>
               <a className={styles.navLinks} onClick={closeMobileMenu}>
                 {t.contact}
+              </a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href='/archive/#title'>
+              <a className={styles.navLinks} onClick={closeMobileMenu}>
+                {t.archive}
               </a>
             </Link>
           </li>

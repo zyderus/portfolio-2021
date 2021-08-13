@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { LocaleContext } from './Layout'
 // import { Project } from '../interfaces/projects'
 
-const ProjectsArchive = ({ list }: any) => {
+const Archive = ({ list }: any) => {
   const { t, locale } = useContext(LocaleContext)
 
   const projects = reverse(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
@@ -25,7 +25,7 @@ const ProjectsArchive = ({ list }: any) => {
   })
 
   return (
-    <section id='experience'>
+    <section id='title'>
       <div className={styles.container}>
         <div className={`heading ${styles.heading}`}>
           <h1>{t.archive}</h1>
@@ -36,4 +36,4 @@ const ProjectsArchive = ({ list }: any) => {
   )
 }
 
-export default ProjectsArchive
+export default Archive

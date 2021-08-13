@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import ProjectsArchive from '../components/ProjectsArchive'
+import Archive from '../components/Archive'
 
 export const getStaticProps = async () => {
   try {
@@ -13,6 +13,6 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function Archive({ projects }: any) {
-  return <ProjectsArchive list={projects} />
+export default function ArchivePage({ projects }: any) {
+  return <Archive list={projects} />
 }

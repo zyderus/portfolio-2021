@@ -4,7 +4,7 @@ import { github, external_link } from '../../constants/icons_outline'
 import useObserver from '../../utilities/useObserver'
 
 const Feature = ({ title, date, description, tech, img, src, src_github }: any) => {
-  const [element, isVisible] = useObserver({ rootMargin: '0px 0px -20% 0px' })
+  const [element, isVisible] = useObserver({ rootMargin: '0px 0px -15% 0px' })
   const isLink = () => {
     if (!src) void 0
   }

@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useContext(LocaleContext)
 
   return (
-    <section className='hero'>
+    <section id='hero' className='hero'>
       <div className={styles.hero}>
         <p className={styles.intro}>
           <span className={styles.waving_hand}>👋</span> {`${t.greet}, ${t.intro}`}
