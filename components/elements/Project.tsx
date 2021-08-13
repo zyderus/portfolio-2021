@@ -6,7 +6,7 @@ import useObserver from '../../utilities/useObserver'
 const randomDelay = (min: number, max: number) => ~~(Math.random() * (max - min + 1) + min)
 
 const Project = ({ title, description, tech, img, src, src_github }: any) => {
-  const [element, isVisible] = useObserver({ rootMargin: '0px 0px -15% 0px' })
+  const [element, isVisible] = useObserver({ rootMargin: '0px 0px -5% 0px' })
 
   return (
     <li

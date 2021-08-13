@@ -2,12 +2,11 @@ import styles from '../styles/Projects.module.css'
 import Link from 'next/link'
 import Button from './elements/Button'
 import Project from './elements/Project'
-import { projects as list } from '../constants/projects'
 import { shapeProjects } from '../utilities/sort'
 import { useState, useEffect, SyntheticEvent, useContext, useRef } from 'react'
 import { LocaleContext } from './Layout'
 
-const Projects = () => {
+const Projects = ({ projects: list }: any) => {
   const { t, locale } = useContext(LocaleContext)
   const [projects, setProjects] = useState<Array<any> | []>([])
   const [viewBtn, setViewBtn] = useState<boolean>(true)

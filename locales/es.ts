@@ -56,4 +56,6 @@ export default {
   sendAgain: 'Inténtelo de nuevo más tarde.',
 
   btnSend: 'Enviar',
+
+  archive: 'Archivo',
 }

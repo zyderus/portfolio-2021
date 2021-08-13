@@ -1,6 +1,6 @@
 import { Project } from '../interfaces/projects'
 
-const reverse = (list: Project[]) =>
+export const reverse = (list: Project[]) =>
   list.sort((a: any, b: any) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
 
 // feature projects

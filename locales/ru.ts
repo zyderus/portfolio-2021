@@ -57,4 +57,6 @@ export default {
   sendAgain: 'Попробуй еще раз немного позже!',
 
   btnSend: 'Отправить',
+
+  archive: 'Архив',
 }

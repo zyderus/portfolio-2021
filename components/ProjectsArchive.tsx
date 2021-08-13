@@ -1,14 +1,14 @@
 import styles from '../styles/Features.module.css'
 import Feature from './elements/Feature'
-import { shapeFeatures } from '../utilities/sort'
+import { reverse } from '../utilities/sort'
 import { useContext } from 'react'
 import { LocaleContext } from './Layout'
-import { Project } from '../interfaces/projects'
+// import { Project } from '../interfaces/projects'
 
-const Features = ({ features }: any) => {
+const ProjectsArchive = ({ list }: any) => {
   const { t, locale } = useContext(LocaleContext)
 
-  const projects = shapeFeatures(features).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
+  const projects = reverse(list).map(({ id, title, date, description, tech, img, src, src_github }: any) => {
     return (
       <li className={styles.list_item} key={id}>
         <Feature
@@ -28,7 +28,7 @@ const Features = ({ features }: any) => {
     <section id='experience'>
       <div className={styles.container}>
         <div className={`heading ${styles.heading}`}>
-          <h1>{t.experienceHeading}</h1>
+          <h1>{t.archive}</h1>
         </div>
         <ul className={styles.list}>{projects}</ul>
       </div>
@@ -36,4 +36,4 @@ const Features = ({ features }: any) => {
   )
 }
 
-export default Features
+export default ProjectsArchive
