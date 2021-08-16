@@ -12,6 +12,7 @@
     "img": "/assets/images/tron.webp",
     "src": "https://watch-movies-app.herokuapp.com/",
     "src_github": "https://github.com/zyderus/movie-app",
+    "type": "web",
     "feature": true,
     "status": "complete"
   },
@@ -28,6 +29,7 @@
     "img": "https://images.unsplash.com/photo-1554080353-321e452ccf19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     "src": "",
     "src_github": "https://github.com/zyderus/diamat-front-react",
+    "type": "web",
     "feature": false,
     "status": "complete"
   },
@@ -44,6 +46,7 @@
     "img": "https://images.unsplash.com/photo-1532529202439-0312ecbf3ae9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     "src": "",
     "src_github": "https://github.com/zyderus/coffee-app",
+    "type": "web",
     "feature": true,
     "status": "complete"
   },
@@ -60,6 +63,7 @@
     "img": "/assets/images/mugbook.webp",
     "src": " https://fervent-golick-3fb234.netlify.app/",
     "src_github": "https://github.com/zyderus/typescript-spa-auth-basic",
+    "type": "web",
     "feature": false,
     "status": "complete"
   },
@@ -69,13 +73,14 @@
     "date": "2021-08-16",
     "tech": ["Typescript", "Next", "Express", "Mongoose", "Websockets"],
     "description": {
-      "en": "Second attempt at building a Facebook Clone. A social media web app featuring user auth, timeline, profile subscribers, instant chat. Built REST backend with Express and Mongoose, frontend with Next js.",
+      "en": "Second attempt at building a Facebook Clone. A social media web app featuring user auth, timeline, profile subscribers, instant chat. The REST backend built with Express and Mongoose, frontend with Next js.",
       "ru": "Вторая попытка создания клона Facebook. Социальная сеть с аутентификацией пользователя, хроникой, подписчиками и чатом в реальном времени. Построил REST бэкэнд с помощью Express и Mongoose, для UX/UI использовал Next js.",
       "es": "Segundo intento de crear un clon de Facebook. Una aplicación web de redes sociales con autenticación de usuario, línea de tiempo, suscriptores de perfil, chat instantáneo. Cree backend REST con Express y Mongoose, frontend con Next js"
     },
-    "img": "https://images.unsplash.com/photo-1560275619-4662e36fa65c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGZpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "img": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNvY2lhbHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "src": "",
     "src_github": "",
+    "type": "web",
     "feature": true,
     "status": "complete"
   },
@@ -92,6 +97,7 @@
     "img": "https://images.unsplash.com/photo-1603897178457-f87e0bf8fd53?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG1hbWFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "src": "",
     "src_github": "https://github.com/zyderus/meco-chat",
+    "type": "web",
     "feature": false,
     "status": "complete"
   },
@@ -108,6 +114,7 @@
     "img": "/assets/images/Portfolio.png",
     "src": "",
     "src_github": "https://github.com/zyderus/portfolio",
+    "type": "web",
     "feature": false,
     "status": "complete"
   },
@@ -124,6 +131,24 @@
     "img": "/assets/images/online_resume.jpg",
     "src": "https://naughty-noyce-154355.netlify.app",
     "src_github": "https://github.com/zyderus/online-resume",
+    "type": "web",
+    "feature": false,
+    "status": "complete"
+  },
+  {
+    "id": 9,
+    "title": "MugBook Social API",
+    "date": "2021-06-01",
+    "tech": ["Typescript", "Express", "Mongoose", "MongoDB"],
+    "description": {
+      "en": "API endpoints for Mugbook Social v2 app. It handles local login and registration, user dashboard, add friends, view timeline and manage posts.",
+      "ru": "API ручки для приложения Mugbook Social v2. Обрабатывают локальный вход и регистрацию, панель управления пользователя, добавление друзей, просмотр хроники и управление сообщениями.",
+      "es": "Puntos finales de API para la aplicación de redes sociales Mugbook v2. Maneja el inicio de sesión y el registro local, el panel de usuario, agregar amigos, ver la línea de tiempo y administrar publicaciones."
+    },
+    "img": "https://images.unsplash.com/photo-1546124404-9e7e3cac2ec1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNlcnZlcnxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "src": "https://mugbook-social-api.herokuapp.com",
+    "src_github": "https://github.com/zyderus/mugbook-social-api",
+    "type": "api",
     "feature": false,
     "status": "complete"
   }
