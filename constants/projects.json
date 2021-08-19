@@ -47,7 +47,7 @@
     "src": "",
     "src_github": "https://github.com/zyderus/coffee-app",
     "type": "web",
-    "feature": true,
+    "feature": false,
     "status": "complete"
   },
   {
@@ -87,7 +87,7 @@
   {
     "id": 6,
     "title": "Meco",
-    "date": "2020-08-01",
+    "date": "2021-05-01",
     "tech": ["Typescript", "Next", "NextAuth", "Express", "Websockets"],
     "description": {
       "en": "A messaging app with Google authentication which you can use to send messages and see who is online.",
@@ -98,7 +98,7 @@
     "src": "https://meco-chat.vercel.app",
     "src_github": "https://github.com/zyderus/meco-chat",
     "type": "web",
-    "feature": false,
+    "feature": true,
     "status": "complete"
   },
   {
