@@ -86,16 +86,16 @@
   },
   {
     "id": 6,
-    "title": "Meco Chat",
+    "title": "Meco",
     "date": "2020-08-01",
-    "tech": ["Typescript", "Next", "Websockets"],
+    "tech": ["Typescript", "Next", "NextAuth", "Express", "Websockets"],
     "description": {
-      "en": "A messaging app you can use to send messages and see who is online.",
-      "ru": "Приложение для обмена сообщениями, которое вы можете использовать, чтобы отправлять сообщения и видеть, кто в сети.",
-      "es": "Una aplicación de mensajería que puede usar para enviar mensajes y ver quién está en línea."
+      "en": "A messaging app with Google authentication which you can use to send messages and see who is online.",
+      "ru": "Приложение для обмена сообщениями с Google аутентификацией, в котором вы можете отправлять, получать сообщения и видеть, кто в сети.",
+      "es": "Una aplicación de mensajería con autenticación de Google que puede usar para enviar mensajes y ver quién está en línea."
     },
-    "img": "https://images.unsplash.com/photo-1603897178457-f87e0bf8fd53?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG1hbWFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "src": "",
+    "img": "/assets/images/meco.png",
+    "src": "https://meco-chat.vercel.app",
     "src_github": "https://github.com/zyderus/meco-chat",
     "type": "web",
     "feature": false,
