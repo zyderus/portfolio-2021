@@ -73,9 +73,9 @@
     "date": "2021-08-16",
     "tech": ["Typescript", "Next", "Express", "Mongoose", "Websockets"],
     "description": {
-      "en": "Second attempt at building a Facebook Clone. A social media web app featuring user auth, timeline, profile subscribers, instant chat. The REST backend built with Express and Mongoose, frontend with Next js.",
-      "ru": "Вторая попытка создания клона Facebook. Социальная сеть с аутентификацией пользователя, хроникой, подписчиками и чатом в реальном времени. Построил REST бэкэнд с помощью Express и Mongoose, для UX/UI использовал Next js.",
-      "es": "Segundo intento de crear un clon de Facebook. Una aplicación web de redes sociales con autenticación de usuario, línea de tiempo, suscriptores de perfil, chat instantáneo. Cree backend REST con Express y Mongoose, frontend con Next js"
+      "en": "Second attempt at building a Facebook Clone. A social media web app featuring user auth, timeline, profile subscribers, instant chat. The REST backend built with Express and Mongoose, frontend design borrowed from Facebook and built with Next js.",
+      "ru": "Вторая попытка создания клона Facebook. Социальная сеть с аутентификацией пользователя, хроникой, подписчиками и чатом в реальном времени. Построил REST бэкэнд с помощью Express и Mongoose, дизайн UX/UI одолжил у Facebook и реализовал на Next js.",
+      "es": "Segundo intento de crear un clon de Facebook. Una aplicación web de redes sociales con autenticación de usuario, línea de tiempo, suscriptores de perfil, chat instantáneo. El backend REST creado con Express y Mongoose, diseño de frontend tomado de Facebook y creado con Next js."
     },
     "img": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNvY2lhbHxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "src": "",
@@ -86,7 +86,7 @@
   },
   {
     "id": 6,
-    "title": "Meco",
+    "title": "Meco Chat",
     "date": "2021-05-01",
     "tech": ["Typescript", "Next", "NextAuth", "Express", "Websockets"],
     "description": {
