@@ -20,7 +20,7 @@ export default {
 
   aboutMe: 'Sobre mí',
   aboutMeTextP1:
-    '¡Oye! Soy Rustam y me gusta hacer cosas que viven en Internet. Mi interés en el desarrollo de aplicaciones comenzó en 1998. Luego, como estudiante, entendí los scripts HTML y CGI, convirtiéndome en un sitio de tarjetas de presentación con un libro de visitas. Sin embargo, durante los siguientes once años, mi trayectoria profesional no se dirigió hacia el código de ninguna manera. Desde consultoría empresarial hasta gestión de artistas, contratación de obras, logística. Y en 2018, Arduino cayó en mis manos. Y allá vamos.',
+    '¡Hola! Soy Rustam y disfruto creando aplicaciones atractivas y amigables para los humanos que alegran el día. Mi interés en el desarrollo de aplicaciones comenzó en 1998. Luego, como estudiante, asimilé los scripts HTML y CGI para construir una página web personal con un libro de visitas. Era espantoso, pero de alguna manera funcional. Sin embargo, en los años siguientes, mi trayectoria profesional no se había orientado hacia el código. Pasé de la consultoría empresarial a la gestión de artistas, contratación de obras, logística. Avance rápido hasta 2018, y de la nada, tuve un encuentro con Arduino con su idea de C ++. Mi cabeza hizo algunos ruidos y clics y el resto es historia.',
   aboutMeTextP2:
     'Actualmente, en desarrollo, utilizo el siguiente conjunto de herramientas que facilitan la creación de aplicaciones atractivas, convenientes y orientadas a la conversión:',
 

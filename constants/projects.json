@@ -5,9 +5,9 @@
     "date": "2020-08-01",
     "tech": ["Node", "Express", "MongoDB", "Bootstrap", "i18n"],
     "description": {
-      "en": "A movies information portal with easily accesible relevant information",
+      "en": "A movie information portal with intuitive UI and easily accesible relevant information",
       "ru": "Информационный портал о фильмах с легкодоступной актуальной информацией",
-      "es": "Un portal de información sobre películas con información relevante de fácil acceso"
+      "es": "Un portal de información de películas con interfaz de usuario intuitiva e información relevante de fácil acceso"
     },
     "img": "/assets/images/tron.webp",
     "src": "https://watch-movies-app.herokuapp.com/",
