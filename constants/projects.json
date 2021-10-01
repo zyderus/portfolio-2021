@@ -159,7 +159,7 @@
     "tech": ["Typescript", "Express", "Mongoose", "MongoDB", "Stripe"],
     "description": {
       "en": "A simple online store template with payment processing dependency inversion design. Stripe API added as a working example. You will not be charged if you attempt a purchase.",
-      "ru": "Простой шаблон интернет-магазина с инверсией зависимостей обработок платежей. Stripe API добавлен как рабочий пример. С вас не будет взиматься плата, если вы попытаетесь совершить покупку.",
+      "ru": "Простой шаблон интернет-магазина с инверсией зависимостей процесса оплаты. Stripe API добавлен как рабочий пример. С вас не будет взиматься плата, если вы попытаетесь совершить покупку.",
       "es": "Una plantilla de tienda en línea simple con diseño de inversión de dependencia de procesamiento de pagos. Stripe API agregada como un ejemplo de trabajo. No se le cobrará si intenta realizar una compra."
     },
     "img": "https://github.com/zyderus/nextjs-shopping-cart/raw/main/public/images/shopping-cart.png?raw=true",
