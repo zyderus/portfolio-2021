@@ -1,37 +1,17 @@
-import { useContext, useState, useEffect } from 'react'
-import styles from '../styles/Contact.module.css'
-import Button from './elements/Button'
-import ContactForm from './elements/ContactForm'
-import { LocaleContext } from './Layout'
+import styles from '@/assets/styles/Contact.module.scss';
 
-const Contact = () => {
-  const [clicked, setClicked] = useState(false)
-  const { t } = useContext(LocaleContext)
-
+export default function Features() {
   return (
     <section id='contact'>
-      <div className={styles.container}>
-        <div className={styles.heading}>
-          <h1>{t.contactHeading}</h1>
-        </div>
+      <div className={styles.content}>
+        <h1>Contact me</h1>
         <p>
-          {t.contactText} <span className={styles.funny}>😄</span>
+          If you have a question about how I can help your project or you just
+          want to say hi, then smash that click button below and get in touch
+          <span className={styles.emoji}>😄</span>
         </p>
-        <div className={styles.contact_form}>
-          {clicked && (
-            <>
-              <ContactForm close={() => setClicked(!clicked)} />
-            </>
-          )}
-        </div>
-        {!clicked && (
-          <Button style='outline' size='large' click={() => setClicked(!clicked)}>
-            {t.btnClick}
-          </Button>
-        )}
+        <button className={styles.button}>Click</button>
       </div>
     </section>
-  )
+  );
 }
-
-export default Contact

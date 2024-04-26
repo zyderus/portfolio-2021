@@ -1,0 +1,21 @@
+$primary-color: #007bff;
+$text-color: #ccc;
+
+.content {
+  text-align: center;
+  max-width: 640px;
+}
+
+.emoji {
+  font-size: 1.4rem;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: $text-color;
+  font-weight: bold;
+  cursor: pointer;
+}

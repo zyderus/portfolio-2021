@@ -1,0 +1,21 @@
+.container {
+  align-items: center;
+}
+
+.listContainer {
+  margin-inline: auto;
+  max-width: 400px;
+}
+
+.list {
+  padding-left: 1rem;
+  padding-right: 25%;
+  columns: 2;
+  column-gap: 30px;
+
+  li {
+    font-family: courier;
+    color: var(--accent);
+    font-weight: bold;
+  }
+}

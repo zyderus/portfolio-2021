@@ -1,6 +1,6 @@
 <div align="center">
   <h2>Portfolio</h2>
-  <strong>Version 1.0</strong>
+  <strong>Version 1.5</strong>
 </div>
 
 <p align="center">

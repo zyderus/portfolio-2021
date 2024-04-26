@@ -1,0 +1,79 @@
+.navbar {
+  position: fixed;
+  height: var(--nav-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  background-color: var(--bg-primary-transparent);
+  transition: height 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    padding 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navbarLogo {
+  flex: 0 0 auto;
+  transition: all 0.1s ease-in;
+
+  h1 {
+    color: var(--accent);
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.navbarLinks {
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+    }
+  }
+}
+
+.resumeButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0069d9;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: calc(var(--nav-height) - 30px);
+    padding: 0 2rem;
+  }
+
+  .navbar.scrolled {
+    background-color: transparent;
+  }
+
+  .navbar.scrolled::before,
+  .navbar.scrolled .logoContainer {
+    transform: translateY(-70px);
+  }
+}

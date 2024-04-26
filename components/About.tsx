@@ -1,42 +1,47 @@
-import styles from '../styles/About.module.css'
-import Image from 'next/image'
-import { useContext } from 'react'
-import { LocaleContext } from './Layout'
-import Button from './elements/Button'
+import styles from '@/assets/styles/About.module.scss';
 
-const About = () => {
-  const { t } = useContext(LocaleContext)
+const techList = [
+  'JavaScript',
+  'TypeScript',
+  'Node',
+  'Express',
+  'React',
+  'Next',
+  'SQL',
+  'MongoDB',
+];
 
+export default function About() {
   return (
-    <section id='about'>
-      <div className={styles.container}>
-        <div className='heading'>
-          <h1>{t.aboutMe}</h1>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.info}>
-            <p>{t.aboutMeTextP1}</p>
-            <p>{t.aboutMeTextP2}</p>
-            <div className={styles.list_container}>
-              <ul className={styles.list}>
-                <li className={styles.li}>JavaScript</li>
-                <li className={styles.li}>Typescript</li>
-                <li className={styles.li}>Node</li>
-                <li className={styles.li}>Express</li>
-                <li className={styles.li}>React</li>
-                <li className={styles.li}>Next</li>
-                <li className={styles.li}>SQL</li>
-                <li className={styles.li}>MongoDB</li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.img_container}>
-            <Image className={styles.image} src={'/assets/images/photo_placeholder.png'} alt='portrait' width={300} height={300} />
-          </div>
+    <section id='about' className={styles.container}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>About Me</h1>
+        <p>
+          Hi! I am Rustam and I enjoy creating attractive, human-friendly apps
+          that brighten up the day. My interest in application development
+          started back in 1998. Then, as a student, I grokked HTML and CGI
+          scripts to built a personal web page with a guestbook. It was hideous,
+          but somehow functional. However, in the following few years, my career
+          path had not steered towards the code. I went from business consulting
+          to artist management, construction recruiting, logistics. Fast-forward
+          to 2018, and out of nowhere, I have an encounter with Arduino with its
+          idea of C++. My head made a few blips and clicks and the rest is
+          history.
+        </p>
+        <p>
+          Today, I use the following set of tools to create beautiful,
+          convenient and conversion-oriented applications:
+        </p>
+        <div className={styles.listContainer}>
+          <ul className={styles.list}>
+            {techList.map((item, idx) => (
+              <li key={idx} className={styles.li}>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-export default About
