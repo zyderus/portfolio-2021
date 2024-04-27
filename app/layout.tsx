@@ -1,6 +1,7 @@
 import '@/assets/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { GlobalProvider } from '@/context/GlobalContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -22,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <GlobalProvider>
+      <html lang='en'>
+        <body className={inter.className}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </GlobalProvider>
   );
 }

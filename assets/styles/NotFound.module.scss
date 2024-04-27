@@ -1,0 +1,19 @@
+.content {
+  padding-top: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.content::before {
+  content: '404';
+  position: fixed;
+  transform: translate(-38%, -50%);
+  font-size: 20em;
+  color: rgba(0, 0, 0, 0.03);
+  z-index: -1;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--accent);
+}
