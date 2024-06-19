@@ -47,8 +47,8 @@ Next js, Typescript
 
 ## Contributors
 
-- Rustam Ziyadov
+- Rustam Ziyodov
 
 ## License & copyright
 
-&copy; Rustam Ziyadov
+&copy; Rustam Ziyodov

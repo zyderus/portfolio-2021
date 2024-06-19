@@ -1,11 +1,11 @@
-import styles from '../styles/About.module.css'
-import Image from 'next/image'
-import { useContext } from 'react'
-import { LocaleContext } from './Layout'
-import Button from './elements/Button'
+import styles from '../styles/About.module.css';
+import Image from 'next/image';
+import { useContext } from 'react';
+import { LocaleContext } from './Layout';
+import Button from './elements/Button';
 
 const About = () => {
-  const { t } = useContext(LocaleContext)
+  const { t } = useContext(LocaleContext);
 
   return (
     <section id='about'>
@@ -31,12 +31,18 @@ const About = () => {
             </div>
           </div>
           <div className={styles.img_container}>
-            <Image className={styles.image} src={'/assets/images/photo_placeholder.png'} alt='portrait' width={300} height={300} />
+            <Image
+              className={styles.image}
+              src={'/assets/images/photo-placeholder.png'}
+              alt='portrait'
+              width={300}
+              height={300}
+            />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

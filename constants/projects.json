@@ -111,7 +111,7 @@
       "ru": "Мой веб-портфолио, построенный с помощью Next js",
       "es": "Mi portafolio web creado con Next js"
     },
-    "img": "/assets/images/Portfolio.png",
+    "img": "/demo/portfolio-2021.webp",
     "src": "",
     "src_github": "https://github.com/zyderus/portfolio",
     "type": "web",
@@ -128,7 +128,7 @@
       "ru": "Портфолио, сделано с Bootstrap",
       "es": "Portafolio construido con Bootstrap"
     },
-    "img": "/assets/images/online_resume.jpg",
+    "img": "/assets/images/online-resume.webp",
     "src": "https://naughty-noyce-154355.netlify.app",
     "src_github": "https://github.com/zyderus/online-resume",
     "type": "web",

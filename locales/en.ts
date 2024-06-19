@@ -12,10 +12,10 @@ export default {
   greetEvening: 'Good evening',
   intro: 'my name is',
   firstName: 'Rustam',
-  lastName: 'Ziyadov,',
+  lastName: 'Ziyodov,',
   slogan: 'and I build things with code',
   aboutSummary:
-    'I am a software engineer based in Moscow, Russia. I specialize in the development of functional and human-friendly applications.',
+    'I am a software engineer. I specialize in the development of functional and human-friendly applications.',
   btnMessageMe: 'Message Me',
 
   aboutMe: 'About Me',
@@ -58,4 +58,4 @@ export default {
   btnSend: 'Send',
 
   archive: 'Archive',
-}
+};

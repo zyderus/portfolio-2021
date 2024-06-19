@@ -1,8 +1,8 @@
-import styles from '../styles/Control.module.css'
-import ControlLocale from './elements/ControlLocale'
-import ControlTheme from './elements/ControlTheme'
-import Link from 'next/link'
-import { github, linkedin } from '../constants/icons_outline'
+import styles from '../styles/Control.module.css';
+import ControlLocale from './elements/ControlLocale';
+import ControlTheme from './elements/ControlTheme';
+import Link from 'next/link';
+import { github, linkedin } from '../constants/icons_outline';
 
 const Control = () => {
   return (
@@ -14,7 +14,7 @@ const Control = () => {
           </Link>
         </li>
         <li className={styles.list_item}>
-          <Link href='https://www.linkedin.com/in/rustamziyadov/'>
+          <Link href='https://www.linkedin.com/in/rustamziyodov/'>
             <a target='_blank'>{linkedin}</a>
           </Link>
         </li>
@@ -26,7 +26,7 @@ const Control = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Control
+export default Control;
